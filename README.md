@@ -1,2 +1,0 @@
-# Obscurity
- Obscurity
