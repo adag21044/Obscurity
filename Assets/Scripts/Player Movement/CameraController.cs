@@ -21,7 +21,6 @@ public class CameraController : MonoBehaviour
         transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
         playerBody.Rotate(Vector3.up * mouseX);
 
-        // Debug for camera rotation
-        Debug.Log($"Mouse Look: X={mouseX}, Y={mouseY}");
+        
     }
 }
