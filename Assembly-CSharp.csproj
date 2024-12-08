@@ -64,17 +64,17 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.25f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Player Movement\MouseController.cs" />
-    <Compile Include="Assets\Player Movement\PlayerMovement.cs" />
-    <Compile Include="Assets\Player Movement\FootSteps.cs" />
-    <Compile Include="Assets\Player Movement\PlayerInput.cs" />
-    <Compile Include="Assets\PSXPack\RGBShiftEffect.cs" />
-    <Compile Include="Assets\Player Movement\CameraController.cs" />
-    <Compile Include="Assets\Player Movement\FPSCharacter.cs" />
-    <Compile Include="Assets\PSXPack\PixelationEffect.cs" />
+    <Compile Include="Assets\Scripts\Player Movement\FootSteps.cs" />
+    <Compile Include="Assets\Scripts\Player Movement\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\PSXPack\PixelationEffect.cs" />
+    <Compile Include="Assets\Scripts\Player Movement\MouseController.cs" />
+    <Compile Include="Assets\Scripts\Player Movement\CameraController.cs" />
+    <Compile Include="Assets\Scripts\PSXPack\RGBShiftEffect.cs" />
+    <Compile Include="Assets\Scripts\Player Movement\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\Player Movement\FPSCharacter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\PSXPack\RGBShiftShader.shader" />
+    <None Include="Assets\Scripts\PSXPack\RGBShiftShader.shader" />
     <None Include="Assets\Day-Night Skyboxes\Textures\Readme for Assigning.txt" />
     <None Include="Assets\Day-Night Skyboxes\readme.txt" />
   </ItemGroup>
