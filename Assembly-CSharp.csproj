@@ -75,6 +75,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PSXPack\RGBShiftShader.shader" />
+    <None Include="Assets\Day-Night Skyboxes\Textures\Readme for Assigning.txt" />
+    <None Include="Assets\Day-Night Skyboxes\readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
