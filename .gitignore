@@ -1,1 +1,7 @@
-# Unity .gitignore 
+# Unity geçici klasörleri
+Temp/
+Library/
+Logs/
+Obj/
+Build/
+Builds/
