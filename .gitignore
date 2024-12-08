@@ -1,3 +1,7 @@
 ECHO is on.
 /Library
 /Temp
+
+# Unity log dosyalarını hariç tut
+Logs/
+*.log
