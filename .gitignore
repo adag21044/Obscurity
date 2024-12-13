@@ -5,3 +5,6 @@ Logs/
 Obj/
 Build/
 Builds/
+Library/ArtifactDB
+Library/Search/transactions.db
+Library/SourceAssetDB
