@@ -51,5 +51,9 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Obscurity v2.sln"
+    "dotnet.defaultSolution": "Obscurity v2.sln",
+    "omnisharp.useModernNet": true,
+    "omnisharp.path": "latest",
+    "omnisharp.enableRoslynAnalyzers": true
+
 }
