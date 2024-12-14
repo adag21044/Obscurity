@@ -7,3 +7,6 @@ Build/
 Builds/
 /Library
 /Library
+Library/ArtifactDB
+Library/Search/transactions.db
+Library/SourceAssetDB
