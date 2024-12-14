@@ -364,6 +364,7 @@
 "Assets/Scripts/Player Movement/FootSteps.cs"
 "Assets/Scripts/Player Movement/FPSCharacter.cs"
 "Assets/Scripts/Player Movement/MouseController.cs"
+"Assets/Scripts/Player Movement/PassageTrigger.cs"
 "Assets/Scripts/Player Movement/PlayerInput.cs"
 "Assets/Scripts/Player Movement/PlayerMovement.cs"
 "Assets/Scripts/PSXPack/PixelationEffect.cs"
