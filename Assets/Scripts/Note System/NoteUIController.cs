@@ -29,49 +29,70 @@ public class NoteUIController : MonoBehaviour
 
     void Update()
     {
-        
-        if (isNoteOpen)
-        {
-            CloseNote();
-        }
-
-        // Handle camera shaking
         if (isCameraShaking)
         {
             ShakeCamera();
         }
-    }
-
-    public void DisplayNote(string noteContent)
-    {
-        noteText.text = noteContent;
-        noteCanvas.SetActive(true);
-        isNoteOpen = true;
-
-        LockPlayerControls(true);
+        
+        if (isNoteOpen && Input.GetKeyDown(KeyCode.Escape))
+        {
+            CloseNote();
+        }
     }
 
     public void CloseNote()
     {
         noteCanvas.SetActive(false);
+        noteText.text = ""; // İçeriği sıfırla
         isNoteOpen = false;
+        LockPlayerControls(false);
+    }
 
-        // Play scream sound using a separate AudioSource
+    public void DisplayNote(string noteContent, bool hasSpecialEffect)
+    {
+        if (noteText != null)
+        {
+            noteText.text = noteContent; // Not içeriğini güncelle
+            Debug.Log("Text successfully updated.");
+        }
+        else
+        {
+            Debug.LogError("noteText reference is null!");
+        }
+
+        noteCanvas.SetActive(true);
+        isNoteOpen = true;
+
+        if (hasSpecialEffect)
+        {
+            PlayScreamAndShake();
+        }
+        else
+        {
+            LockPlayerControls(true);
+        }
+    }
+
+
+
+
+    
+
+    private void PlayScreamAndShake()
+    {
         if (screamSound != null)
         {
             screamAudioSource.PlayOneShot(screamSound);
         }
 
         StartCameraShake();
-
-        LockPlayerControls(false);
+        LockPlayerControls(true);
     }
 
     private void StartCameraShake()
     {
         isCameraShaking = true;
         originalCameraPosition = mainCamera.transform.localPosition;
-        LockPlayerControls(true);
         Invoke(nameof(StopCameraShake), cameraShakeDuration);
     }
 
