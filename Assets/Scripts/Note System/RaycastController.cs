@@ -13,19 +13,18 @@ public class RaycastController : MonoBehaviour
         HandleInput();
     }
 
-    // Sends a raycast from the center of the camera and checks for notes
     private void HandleRaycast()
     {
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
         RaycastHit hit;
 
-        // Check if raycast hits a note
         if (Physics.Raycast(ray, out hit, rayDistance))
         {
             NoteComponent note = hit.collider.GetComponent<NoteComponent>();
 
             if (note != null)
             {
+                Debug.Log("Raycast hit: " + hit.collider.gameObject.name);
                 currentNote = note;
                 interactionText.text = "Open Note: E";
                 interactionText.gameObject.SetActive(true);
@@ -33,18 +32,28 @@ public class RaycastController : MonoBehaviour
             }
         }
 
-        // Hide the interaction text if no note is detected
         interactionText.gameObject.SetActive(false);
         currentNote = null;
     }
 
-    // Handles input for opening the note
     private void HandleInput()
     {
         if (currentNote != null && Input.GetKeyDown(KeyCode.E))
         {
-            // Display the note content in the UI
-            NoteUIController.instance.DisplayNote(currentNote.GetNoteContent());
+            Debug.Log("Current Note Data: " + currentNote);
+            Debug.Log("Note Content: " + currentNote.GetNoteContent());
+            Debug.Log("Has Special Effect: " + currentNote.HasSpecialEffect());
+
+            if (NoteUIController.instance != null)
+            {
+                NoteUIController.instance.DisplayNote(currentNote);
+                currentNote.UpdateTextFromData();
+                Debug.Log("DisplayNote called successfully");
+            }
+            else
+            {
+                Debug.LogError("NoteUIController instance is null!");
+            }
         }
     }
 }

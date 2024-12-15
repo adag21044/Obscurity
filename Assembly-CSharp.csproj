@@ -65,19 +65,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player Movement\FootSteps.cs" />
+    <Compile Include="Assets\Scripts\Door Interaction System\Door.cs" />
+    <Compile Include="Assets\Scripts\Door Interaction System\DoorObserver.cs" />
     <Compile Include="Assets\Scripts\Note System\NoteComponent.cs" />
     <Compile Include="Assets\Scripts\Note System\NoteUIController.cs" />
     <Compile Include="Assets\Scripts\Note System\BillboardText.cs" />
     <Compile Include="Assets\Scripts\Player Movement\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Door Interaction System\IDoorState.cs" />
+    <Compile Include="Assets\Scripts\Door Interaction System\LockedDoorState.cs" />
     <Compile Include="Assets\Scripts\PSXPack\PixelationEffect.cs" />
+    <Compile Include="Assets\Scripts\Door Interaction System\KeyManager.cs" />
     <Compile Include="Assets\Scripts\Note System\NoteSO.cs" />
     <Compile Include="Assets\Scripts\Player Movement\PassageTrigger.cs" />
+    <Compile Include="Assets\Scripts\Door Interaction System\UnlockedDoorState.cs" />
+    <Compile Include="Assets\Scripts\Door Interaction System\Key.cs" />
     <Compile Include="Assets\Scripts\Player Movement\MouseController.cs" />
     <Compile Include="Assets\Scripts\Player Movement\CameraController.cs" />
     <Compile Include="Assets\Scripts\PSXPack\RGBShiftEffect.cs" />
     <Compile Include="Assets\Scripts\Player Movement\PlayerInput.cs" />
+    <Compile Include="Assets\Scripts\Door Interaction System\OpenDoorState.cs" />
     <Compile Include="Assets\Scripts\Player Movement\FPSCharacter.cs" />
     <Compile Include="Assets\Scripts\Note System\RaycastController.cs" />
+    <Compile Include="Assets\Scripts\Door Interaction System\UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -948,29 +957,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj" />
+    <ProjectReference Include="Unity.Timeline.Editor.csproj" />
+    <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj" />
+    <ProjectReference Include="Unity.VisualStudio.Editor.csproj" />
+    <ProjectReference Include="Unity.VisualScripting.Core.csproj" />
+    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj" />
+    <ProjectReference Include="UnityEditor.UI.csproj" />
+    <ProjectReference Include="Unity.Rider.Editor.csproj" />
+    <ProjectReference Include="UnityEngine.UI.csproj" />
+    <ProjectReference Include="Unity.VisualScripting.Flow.csproj" />
+    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj" />
     <ProjectReference Include="Unity.Timeline.csproj" />
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj" />
-    <ProjectReference Include="UnityEngine.UI.csproj" />
-    <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj" />
     <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj" />
     <ProjectReference Include="Unity.Performance.Profile-Analyzer.Editor.csproj" />
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj" />
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj" />
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj" />
     <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj" />
-    <ProjectReference Include="Unity.Timeline.Editor.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Shared.Editor.csproj" />
-    <ProjectReference Include="Unity.VisualStudio.Editor.csproj" />
     <ProjectReference Include="Unity.TextMeshPro.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Core.csproj" />
     <ProjectReference Include="Unity.TextMeshPro.Editor.csproj" />
-    <ProjectReference Include="UnityEditor.UI.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj" />
-    <ProjectReference Include="Unity.Rider.Editor.csproj" />
     <ProjectReference Include="Unity.VisualScripting.State.csproj" />
     <ProjectReference Include="Unity.VSCode.Editor.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Flow.csproj" />
-    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj" />
   </ItemGroup>
   <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
   <ItemGroup>

@@ -5,7 +5,8 @@ public class NoteUIController : MonoBehaviour
 {
     private bool isNoteOpen = false; // Tracks if the note is currently open
     [SerializeField] private GameObject noteCanvas; // Reference to the note UI canvas
-    [SerializeField] private TMP_Text noteText; // Text component to display note content
+    public NoteComponent currentNote; // Reference to the currently displayed note
+    [SerializeField] private TextMeshProUGUI noteText; // Text component to display note content
     [SerializeField] private AudioClip screamSound; // Scream sound effect
     [SerializeField] private float cameraShakeDuration = 10f; // Duration of camera shake
     [SerializeField] private float cameraShakeIntensity = 0.1f; // Intensity of camera shake
@@ -29,49 +30,73 @@ public class NoteUIController : MonoBehaviour
 
     void Update()
     {
-        
-        if (isNoteOpen)
-        {
-            CloseNote();
-        }
-
-        // Handle camera shaking
         if (isCameraShaking)
         {
             ShakeCamera();
         }
-    }
-
-    public void DisplayNote(string noteContent)
-    {
-        noteText.text = noteContent;
-        noteCanvas.SetActive(true);
-        isNoteOpen = true;
-
-        LockPlayerControls(true);
+        
+        if (isNoteOpen && Input.GetKeyDown(KeyCode.Escape))
+        {
+            CloseNote();
+        }
     }
 
     public void CloseNote()
     {
         noteCanvas.SetActive(false);
+        noteText.text = ""; // İçeriği sıfırla
         isNoteOpen = false;
+        LockPlayerControls(false);
+    }
 
-        // Play scream sound using a separate AudioSource
+    public void DisplayNote(NoteComponent note)
+    {
+        currentNote = note;
+        Debug.Log("Displaying note: " + note.GetNoteContent());
+
+        if (noteText != null)
+        {
+            noteText.text = currentNote.GetNoteContent(); // Not içeriğini güncelle
+            currentNote.UpdateTextFromData();
+        }
+        else
+        {
+        
+        }
+
+        noteCanvas.SetActive(true);
+        isNoteOpen = true;
+
+        if (currentNote.HasSpecialEffect())
+        {
+            PlayScreamAndShake();
+        }
+        else
+        {
+            LockPlayerControls(true);
+        }
+    }
+
+
+
+
+    
+
+    private void PlayScreamAndShake()
+    {
         if (screamSound != null)
         {
             screamAudioSource.PlayOneShot(screamSound);
         }
 
         StartCameraShake();
-
-        LockPlayerControls(false);
+        LockPlayerControls(true);
     }
 
     private void StartCameraShake()
     {
         isCameraShaking = true;
         originalCameraPosition = mainCamera.transform.localPosition;
-        LockPlayerControls(true);
         Invoke(nameof(StopCameraShake), cameraShakeDuration);
     }
 

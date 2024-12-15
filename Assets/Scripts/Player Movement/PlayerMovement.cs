@@ -19,7 +19,5 @@ public class PlayerMovement : MonoBehaviour
         // Move the player
         rb.MovePosition(rb.position + move * moveSpeed * Time.deltaTime);
 
-        // Debug for movement
-        Debug.Log($"Moving: {move}");
     }
 }
