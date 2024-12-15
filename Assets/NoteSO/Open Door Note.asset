@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c151fe804080f95489bd85569f660c4e, type: 3}
   m_Name: Open Door Note
   m_EditorClassIdentifier: 
-  noteContent: 'Open Door - If you got the key (Press E) '
+  noteContent: 'Find the Key
+
+
+'

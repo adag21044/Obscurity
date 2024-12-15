@@ -5,7 +5,8 @@ public class NoteUIController : MonoBehaviour
 {
     private bool isNoteOpen = false; // Tracks if the note is currently open
     [SerializeField] private GameObject noteCanvas; // Reference to the note UI canvas
-    [SerializeField] private TMP_Text noteText; // Text component to display note content
+    public NoteComponent currentNote; // Reference to the currently displayed note
+    [SerializeField] private TextMeshProUGUI noteText; // Text component to display note content
     [SerializeField] private AudioClip screamSound; // Scream sound effect
     [SerializeField] private float cameraShakeDuration = 10f; // Duration of camera shake
     [SerializeField] private float cameraShakeIntensity = 0.1f; // Intensity of camera shake
@@ -48,22 +49,25 @@ public class NoteUIController : MonoBehaviour
         LockPlayerControls(false);
     }
 
-    public void DisplayNote(string noteContent, bool hasSpecialEffect)
+    public void DisplayNote(NoteComponent note)
     {
+        currentNote = note;
+        Debug.Log("Displaying note: " + note.GetNoteContent());
+
         if (noteText != null)
         {
-            noteText.text = noteContent; // Not içeriğini güncelle
-            Debug.Log("Text successfully updated.");
+            noteText.text = currentNote.GetNoteContent(); // Not içeriğini güncelle
+            currentNote.UpdateTextFromData();
         }
         else
         {
-            Debug.LogError("noteText reference is null!");
+        
         }
 
         noteCanvas.SetActive(true);
         isNoteOpen = true;
 
-        if (hasSpecialEffect)
+        if (currentNote.HasSpecialEffect())
         {
             PlayScreamAndShake();
         }

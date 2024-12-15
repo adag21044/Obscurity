@@ -46,7 +46,8 @@ public class RaycastController : MonoBehaviour
 
             if (NoteUIController.instance != null)
             {
-                NoteUIController.instance.DisplayNote(currentNote.GetNoteContent(), currentNote.HasSpecialEffect());
+                NoteUIController.instance.DisplayNote(currentNote);
+                currentNote.UpdateTextFromData();
                 Debug.Log("DisplayNote called successfully");
             }
             else
