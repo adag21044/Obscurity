@@ -1,7 +1,9 @@
 using UnityEngine;
 
-public interface IInteractable 
+// Interface for all interactable objects
+public interface IInteractable
 {
-    void Interact();
-    string GetDescription();
+    void Interact();              // Defines the interaction behavior
+    string GetDescription();      // Returns the interaction description
+    bool IsAvailable();           // Checks if interaction is possible
 }

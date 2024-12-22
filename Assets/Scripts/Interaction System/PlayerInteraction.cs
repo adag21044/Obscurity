@@ -1,41 +1,51 @@
 using TMPro;
 using UnityEngine;
 
+// Handles player interactions with objects
 public class PlayerInteraction : MonoBehaviour
 {
-    public Camera mainCam;
-    public float interactionDistance = 2f;
-    public GameObject interactionUI;
-    public TextMeshProUGUI interactionText;
+    public Camera mainCam;                          // Reference to the player's camera
+    public float interactionDistance = 2f;          // Maximum distance to interact with objects
+    public GameObject interactionUI;                // UI element for interaction prompt
+    public TextMeshProUGUI interactionText;         // Text field for interaction description
+
+    private IInteractable currentInteractable;      // Currently detected interactable object
 
     private void Update()
     {
-        InteractionRay();
+        DetectInteraction();                        // Check for interactable objects
+        HandleInput();                              // Handle player input for interactions
     }
 
-    void InteractionRay()
+    // Casts a ray to detect interactable objects
+    void DetectInteraction()
     {
-        Ray ray = mainCam.ViewportPointToRay(Vector3.one/2f);
+        Ray ray = mainCam.ViewportPointToRay(Vector3.one / 2f); // Cast ray from screen center
         RaycastHit hit;
 
-        bool hitSomething = false;
+        currentInteractable = null;                // Reset current interactable
+        interactionUI.SetActive(false);            // Hide interaction UI
 
-        if(Physics.Raycast(ray, out hit, interactionDistance))
+        if (Physics.Raycast(ray, out hit, interactionDistance))
         {
             IInteractable interactable = hit.collider.GetComponent<IInteractable>();
 
-            if(interactable != null)
+            if (interactable != null && interactable.IsAvailable())
             {
-                hitSomething = true;
+                // Set the current interactable and update the UI
+                currentInteractable = interactable;
                 interactionText.text = interactable.GetDescription();
-
-                if(Input.GetKeyDown(KeyCode.E))
-                {
-                    interactable.Interact();
-                }
+                interactionUI.SetActive(true);
             }
-        }  
+        }
+    }
 
-        interactionUI.SetActive(hitSomething);
+    // Handles player input for interacting with objects
+    void HandleInput()
+    {
+        if (currentInteractable != null && Input.GetKeyDown(KeyCode.E))
+        {
+            currentInteractable.Interact(); // Perform interaction
+        }
     }
 }
