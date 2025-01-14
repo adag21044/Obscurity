@@ -65,9 +65,12 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.31f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Interaction System\Puzzle System\RotatingPuzzle.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\Puzzle System\BasePuzzle.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Note System\NoteSO.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Note System\Note.cs" />
     <Compile Include="Assets\Scripts\Player Movement\PassageTrigger.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\InteractableSO.cs" />
     <Compile Include="Assets\Scripts\Player Movement\CameraController.cs" />
     <Compile Include="Assets\Scripts\Player Movement\FootSteps.cs" />
     <Compile Include="Assets\Scripts\Player Movement\PlayerMovement.cs" />
@@ -79,6 +82,9 @@
     <Compile Include="Assets\Scripts\Interaction System\Color Changer.cs" />
     <Compile Include="Assets\Scripts\Interaction System\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Player Movement\FPSCharacter.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\Puzzle System\PuzzleManager.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\Puzzle System\PuzzleFactory.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\Puzzle System\IPuzzle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

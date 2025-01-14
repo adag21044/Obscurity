@@ -426,8 +426,8 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting\Editor\VisualScripting.Core\Inspection\Unity\RectInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting\Editor\VisualScripting.Core\Inspection\Primitives\SbyteInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting\Editor\VisualScripting.Core\Serialization\MovedFromAttributeExtensions.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting\Editor\VisualScripting.Core\Interface\Fuzzy\FuzzyOption.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting\Editor\VisualScripting.Core\Interface\Fonts\FontVariant.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting\Editor\VisualScripting.Core\Interface\Fuzzy\FuzzyOption.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting\Editor\VisualScripting.Core\Widgets\StickyNote\StickyNoteInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting\Editor\VisualScripting.Core\Documentation\XmlDocumentation.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting\Editor\VisualScripting.Core\Windows\Sidebars\Sidebars.cs" />

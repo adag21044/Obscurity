@@ -45,7 +45,15 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (currentInteractable != null && Input.GetKeyDown(KeyCode.E))
         {
-            currentInteractable.Interact(); // Perform interaction
+            if (currentInteractable is IPuzzle puzzle)
+            {
+                puzzle.Interact(); // Puzzle etkileşimi
+            }
+            else
+            {
+                currentInteractable.Interact(); // Diğer etkileşim
+            }
         }
     }
+
 }
