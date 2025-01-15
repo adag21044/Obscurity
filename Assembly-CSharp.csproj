@@ -68,7 +68,6 @@
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\RotatingPuzzle.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\IAction.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\EventManager.cs" />
-    <Compile Include="Assets\Scripts\Jumpscare\Triggers\UnityVideoPlayerAdapter.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\BasePuzzle.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\CollisionTrigger.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Note System\NoteSO.cs" />
@@ -91,6 +90,7 @@
     <Compile Include="Assets\Scripts\Jumpscare\Event.cs" />
     <Compile Include="Assets\Scripts\Player Movement\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Color Changer.cs" />
+    <Compile Include="Assets\Scripts\Jumpscare\Triggers\JumpScare.cs" />
     <Compile Include="Assets\Scripts\Interaction System\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Player Movement\FPSCharacter.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\JumpScareTriggerAction.cs" />

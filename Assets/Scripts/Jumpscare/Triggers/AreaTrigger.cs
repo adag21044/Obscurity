@@ -13,16 +13,13 @@ public class AreaTrigger : MonoBehaviour
         // Event sistemini al
         currentEvent = EventManager.GetEvent(eventName);
 
-        // VideoPlayer'ı dinamik olarak bir GameObject'e ekleyin
-        var videoPlayerObject = new GameObject("VideoPlayerObject");
-        var videoPlayer = videoPlayerObject.AddComponent<UnityEngine.Video.VideoPlayer>();
-        videoPlayer.url = videoPath;           // Videonun yolu
-        videoPlayer.playOnAwake = false;      // Videoyu otomatik oynatma
-        videoPlayer.isLooping = false;        // Döngüye girmesini önle
+        // JumpScare nesnesini oluştur ve ilgili GameObject'i bağla
+        var jumpScare = new JumpScare
+        {
+            jumpscareObject = GameObject.Find("JumpscareObject") // Objeyi sahneden bul veya prefab olarak yükle
+        };
 
-        // Triggerable interface'ini kullanan VideoPlayer sınıfını hazırlayın
-        var videoTriggerable = new UnityVideoPlayerAdapter(videoPlayer);
-        action = new JumpScareTriggerAction(videoTriggerable);
+        action = new JumpScareTriggerAction(jumpScare);
 
         // Event sistemine eylemi ekle
         currentEvent.AddListener(action);

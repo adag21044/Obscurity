@@ -4516,12 +4516,12 @@ GameObject:
   - component: {fileID: 1163291862}
   - component: {fileID: 1163291861}
   m_Layer: 0
-  m_Name: VideoPlayer
+  m_Name: Jumpscare Video
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!328 &1163291861
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -5521,6 +5521,7 @@ GameObject:
   - component: {fileID: 1507248924}
   - component: {fileID: 1507248923}
   - component: {fileID: 1507248925}
+  - component: {fileID: 1507248926}
   m_Layer: 0
   m_Name: JumpscareAreaTrigger
   m_TagString: AreaTrigger
@@ -5578,6 +5579,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventName: OnAreaEntered
   videoPath: Assets/Video/jumpScareVideo.mp4
+--- !u!114 &1507248926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507248922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5096ce6b07776488b34ccc20d4c566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpscareObject: {fileID: 1163291860}
+  scareSound: {fileID: 8300000, guid: 47b38cbc562dec2429b63a3f05428813, type: 3}
 --- !u!1 &1517982401
 GameObject:
   m_ObjectHideFlags: 0
