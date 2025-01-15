@@ -66,22 +66,34 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\RotatingPuzzle.cs" />
+    <Compile Include="Assets\Scripts\Jumpscare\IAction.cs" />
+    <Compile Include="Assets\Scripts\Jumpscare\EventManager.cs" />
+    <Compile Include="Assets\Scripts\Jumpscare\Triggers\UnityVideoPlayerAdapter.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\BasePuzzle.cs" />
+    <Compile Include="Assets\Scripts\Jumpscare\Triggers\CollisionTrigger.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Note System\NoteSO.cs" />
+    <Compile Include="Assets\Scripts\Jumpscare\ITriggerable.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Note System\Note.cs" />
     <Compile Include="Assets\Scripts\Player Movement\PassageTrigger.cs" />
     <Compile Include="Assets\Scripts\Interaction System\InteractableSO.cs" />
     <Compile Include="Assets\Scripts\Player Movement\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Jumpscare\Triggers\PickupItemAction.cs" />
+    <Compile Include="Assets\Scripts\Jumpscare\Triggers\PickupItem.cs" />
     <Compile Include="Assets\Scripts\Player Movement\FootSteps.cs" />
+    <Compile Include="Assets\Scripts\Jumpscare\IEvent.cs" />
     <Compile Include="Assets\Scripts\Player Movement\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PSXPack\PixelationEffect.cs" />
+    <Compile Include="Assets\Scripts\Jumpscare\Triggers\AreaTrigger.cs" />
+    <Compile Include="Assets\Scripts\Jumpscare\CustomVideoPlayer.cs" />
     <Compile Include="Assets\Scripts\Interaction System\PlayerInteraction.cs" />
     <Compile Include="Assets\Scripts\Player Movement\MouseController.cs" />
     <Compile Include="Assets\Scripts\PSXPack\RGBShiftEffect.cs" />
+    <Compile Include="Assets\Scripts\Jumpscare\Event.cs" />
     <Compile Include="Assets\Scripts\Player Movement\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Color Changer.cs" />
     <Compile Include="Assets\Scripts\Interaction System\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Player Movement\FPSCharacter.cs" />
+    <Compile Include="Assets\Scripts\Jumpscare\JumpScareTriggerAction.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\PuzzleManager.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\PuzzleFactory.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\IPuzzle.cs" />
