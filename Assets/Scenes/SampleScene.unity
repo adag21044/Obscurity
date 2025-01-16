@@ -4515,13 +4515,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1163291862}
   - component: {fileID: 1163291861}
+  - component: {fileID: 1163291863}
   m_Layer: 0
-  m_Name: Jumpscare Video
+  m_Name: JumpscareObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!328 &1163291861
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -4533,12 +4534,12 @@ VideoPlayer:
   m_VideoClip: {fileID: 32900000, guid: ecaf9e77f207c034d91b47243f2811ac, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
+  m_TargetCamera: {fileID: 963194227}
   m_TargetTexture: {fileID: 8400000, guid: d1e6017e89ef7df449cc08fdfeff5076, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 2
+  m_RenderMode: 1
   m_AspectRatio: 2
   m_DataSource: 0
   m_TimeUpdateMode: 2
@@ -4550,10 +4551,10 @@ VideoPlayer:
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!4 &1163291862
@@ -4571,6 +4572,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1163291863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163291860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5096ce6b07776488b34ccc20d4c566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpscareObject: {fileID: 1163291860}
+  scareSound: {fileID: 8300000, guid: 47b38cbc562dec2429b63a3f05428813, type: 3}
 --- !u!64 &1169511726
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5578,7 +5593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventName: OnAreaEntered
-  videoPath: Assets/Video/jumpScareVideo.mp4
+  jumpscareObject: {fileID: 1163291860}
 --- !u!114 &1507248926
 MonoBehaviour:
   m_ObjectHideFlags: 0

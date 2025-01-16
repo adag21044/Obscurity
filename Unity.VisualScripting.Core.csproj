@@ -147,8 +147,8 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting\Runtime\VisualScripting.Core\Graphs\IGraphRoot.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting\Runtime\VisualScripting.Core\EditorBinding\Inspector\InspectorActionDirectionAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting\Runtime\VisualScripting.Core\Dependencies\FullSerializer\fsData.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting\Runtime\VisualScripting.Core\Unity\RequiresUnityAPIAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting\Runtime\VisualScripting.Core\Exceptions\InvalidConversionException.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting\Runtime\VisualScripting.Core\Unity\RequiresUnityAPIAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting\Runtime\VisualScripting.Core\Collections\INotifiedCollectionItem.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting\Runtime\VisualScripting.Core\Ensure\EnsureThat.Collections.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting\Runtime\VisualScripting.Core\Decorators\IDecoratorAttribute.cs" />

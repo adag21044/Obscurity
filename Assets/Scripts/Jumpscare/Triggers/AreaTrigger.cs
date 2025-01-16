@@ -1,10 +1,9 @@
 using UnityEngine;
-using UnityEngine.Video;
 
 public class AreaTrigger : MonoBehaviour
 {
     [SerializeField] private string eventName = "OnAreaEntered";
-    [SerializeField] private string videoPath;
+    [SerializeField] private GameObject jumpscareObject; // Inspector üzerinden bağlanacak
     private IAction action;
     private IEvent currentEvent;
 
@@ -13,16 +12,24 @@ public class AreaTrigger : MonoBehaviour
         // Event sistemini al
         currentEvent = EventManager.GetEvent(eventName);
 
-        // JumpScare nesnesini oluştur ve ilgili GameObject'i bağla
-        var jumpScare = new JumpScare
+        // JumpScare bileşenini al
+        if (jumpscareObject != null)
         {
-            jumpscareObject = GameObject.Find("JumpscareObject") // Objeyi sahneden bul veya prefab olarak yükle
-        };
-
-        action = new JumpScareTriggerAction(jumpScare);
-
-        // Event sistemine eylemi ekle
-        currentEvent.AddListener(action);
+            var jumpScare = jumpscareObject.GetComponent<JumpScare>();
+            if (jumpScare != null)
+            {
+                action = new JumpScareTriggerAction(jumpScare);
+                currentEvent.AddListener(action);
+            }
+            else
+            {
+                Debug.LogError("JumpScare component not found on JumpscareObject!");
+            }
+        }
+        else
+        {
+            Debug.LogError("JumpscareObject is not assigned in the Inspector!");
+        }
     }
 
     private void OnDestroy()
