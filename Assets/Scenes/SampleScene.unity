@@ -1704,6 +1704,7 @@ MonoBehaviour:
   objectData: 
   readingNote: {fileID: 919132148945287133}
   noteText: {fileID: 0}
+  isNoteOpened: 0
   mainCamera: {fileID: 963194227}
   rayDistance: 10
 --- !u!1 &465320616 stripped
@@ -7134,7 +7135,7 @@ GameObject:
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -13403,6 +13404,7 @@ MonoBehaviour:
   objectData: 
   readingNote: {fileID: 919132148945287133}
   noteText: {fileID: 0}
+  isNoteOpened: 0
   mainCamera: {fileID: 963194227}
   rayDistance: 10
 --- !u!1 &919132148040553850
@@ -13439,6 +13441,7 @@ MonoBehaviour:
   objectData: iii
   readingNote: {fileID: 919132148945287133}
   noteText: {fileID: 1582677667}
+  isNoteOpened: 0
   mainCamera: {fileID: 963194227}
   rayDistance: 10
 --- !u!65 &919132148040553852
@@ -13951,6 +13954,6 @@ SceneRoots:
   - {fileID: 1507248924}
   - {fileID: 1950281069}
   - {fileID: 1163291862}
-  - {fileID: 1527332645}
   - {fileID: 1894963529}
+  - {fileID: 1527332645}
   - {fileID: 543450652566163392}
