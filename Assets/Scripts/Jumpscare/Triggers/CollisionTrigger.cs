@@ -27,11 +27,13 @@ public class CollisionTrigger : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
+            Debug.Log("Player collided with the enemy!");
             currentEvent.Notify();
         }
     }
+
 }

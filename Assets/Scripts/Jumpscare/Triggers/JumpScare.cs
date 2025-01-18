@@ -12,7 +12,6 @@ public class JumpScare : MonoBehaviour, ITriggerable
     {
         if (jumpscareObject != null)
         {
-            jumpscareObject.SetActive(false); // Başlangıçta devre dışı bırak
             videoPlayer = jumpscareObject.GetComponent<VideoPlayer>();
             if (videoPlayer != null)
             {

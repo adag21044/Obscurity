@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Interaction System\Note System\NoteSO.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\ITriggerable.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Note System\Note.cs" />
+    <Compile Include="Assets\Scripts\Jumpscare\Triggers\EnemyCollisionTrigger.cs" />
     <Compile Include="Assets\Scripts\Player Movement\PassageTrigger.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
     <Compile Include="Assets\Scripts\Interaction System\InteractableSO.cs" />

@@ -7021,6 +7021,10 @@ GameObject:
   - component: {fileID: 1894963528}
   - component: {fileID: 1894963527}
   - component: {fileID: 1894963530}
+  - component: {fileID: 1894963531}
+  - component: {fileID: 1894963532}
+  - component: {fileID: 1894963533}
+  - component: {fileID: 1894963534}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -11856,6 +11860,82 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2072100526}
+--- !u!114 &1894963531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894963526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5096ce6b07776488b34ccc20d4c566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpscareObject: {fileID: 1163291860}
+  scareSound: {fileID: 8300000, guid: 47b38cbc562dec2429b63a3f05428813, type: 3}
+--- !u!65 &1894963532
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894963526}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 18.28, y: 25.6, z: 40.41325}
+  m_Center: {x: -1.8298825e-14, y: 5, z: 10.771612}
+--- !u!114 &1894963533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894963526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bbdaeb5cc7c23f429301ff734cd1bab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventName: OnCollisionWithPlayer
+  jumpscareObject: {fileID: 1163291860}
+--- !u!54 &1894963534
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894963526}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1950281067
 GameObject:
   m_ObjectHideFlags: 0

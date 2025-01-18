@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class AreaTrigger : MonoBehaviour
+public class EnemyCollisionTrigger : MonoBehaviour
 {
-    [SerializeField] private string eventName = "OnAreaEntered";
+    [SerializeField] private string eventName = "OnEnemyCollision";
     [SerializeField] private GameObject jumpscareObject; 
     private IAction action;
     private IEvent currentEvent;
@@ -11,6 +11,11 @@ public class AreaTrigger : MonoBehaviour
     {
         // Get Event system
         currentEvent = EventManager.GetEvent(eventName);
+
+        if (currentEvent == null)
+        {
+            Debug.LogError("CurrentEvent is null! Event name might be wrong.");
+        }
 
         // JumpScare bileşenini al
         if (jumpscareObject != null)
@@ -44,6 +49,7 @@ public class AreaTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Player collided with the enemy!");
             currentEvent.Notify();
         }
     }
