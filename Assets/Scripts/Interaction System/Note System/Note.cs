@@ -1,56 +1,54 @@
+using System;
 using UnityEngine;
 
 public class Note : MonoBehaviour, IInteractable
 {
-    [SerializeField] private NoteSO noteData;          // Reference to note data
-    [SerializeField] private GameObject noteUIPanel;   // Reference to note UI panel
-    [SerializeField] private TMPro.TextMeshProUGUI noteUIText; // Text element to display note content
+    public NoteSO noteData; // The note data
+    public string objectData;
+    public GameObject readingNote;
 
-    private bool isOpen = false; // Tracks if the note is currently open
-
-    // Returns the description of the note
     public string GetDescription()
     {
-        return isOpen ? "Close the note" : "Press E to read the note";
+        throw new System.NotImplementedException();
     }
 
-    // Handles interaction with the note
     public void Interact()
     {
-        if (!isOpen)
-        {
-            OpenNote();
-        }
-        else
-        {
-            CloseNote();
-        }
+        throw new System.NotImplementedException();
     }
 
-    // Opens the note UI and displays its content
-    private void OpenNote()
-    {
-        if (noteData != null && noteUIPanel != null && noteUIText != null)
-        {
-            noteUIText.text = noteData.content; // Set the note content in the UI
-            noteUIPanel.SetActive(true);       // Show the UI panel
-            isOpen = true;
-        }
-    }
-
-    // Closes the note UI
-    private void CloseNote()
-    {
-        if (noteUIPanel != null)
-        {
-            noteUIPanel.SetActive(false);      // Hide the UI panel
-            isOpen = false;
-        }
-    }
-
-    // Determines if the note can be interacted with
     public bool IsAvailable()
     {
-        return true; // Always available
+        throw new System.NotImplementedException();
+    }
+
+    public Camera mainCamera; // Ana kamera
+    public float rayDistance = 10f; // Ray mesafesi
+
+    void Update()
+    {
+        // Mouse sol tık kontrolü (isteğe bağlı)
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0)); // Kameranın merkezinden ray gönder
+            if (Physics.Raycast(ray, out RaycastHit hit, rayDistance))
+            {
+                // Objeyi tespit ettik
+                Note objScript = hit.collider.GetComponent<Note>();
+                if (objScript != null && objScript.objectData != null)
+                {
+                    Debug.Log($"Baktığınız obje: {hit.collider.name}");
+                    Debug.Log($"Objenin metni: {objScript.objectData}");
+                }
+                else
+                {
+                    Debug.Log("Baktığınız obje ScriptableObject referansı taşımıyor.");
+                }
+            }
+            else
+            {
+                Debug.Log("Hiçbir obje algılanmadı.");
+            }
+        }
     }
 }
