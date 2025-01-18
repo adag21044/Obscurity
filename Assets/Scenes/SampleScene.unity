@@ -1671,7 +1671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &464248316
 Transform:
   m_ObjectHideFlags: 0
@@ -1703,6 +1703,7 @@ MonoBehaviour:
   noteData: {fileID: 0}
   objectData: 
   readingNote: {fileID: 919132148945287133}
+  noteText: {fileID: 0}
   mainCamera: {fileID: 963194227}
   rayDistance: 10
 --- !u!1 &465320616 stripped
@@ -13385,7 +13386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &919132147947133471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13401,6 +13402,7 @@ MonoBehaviour:
   noteData: {fileID: 0}
   objectData: 
   readingNote: {fileID: 919132148945287133}
+  noteText: {fileID: 0}
   mainCamera: {fileID: 963194227}
   rayDistance: 10
 --- !u!1 &919132148040553850
@@ -13435,7 +13437,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteData: {fileID: 11400000, guid: 747517c0477afdf438ccc6a60a877d56, type: 2}
   objectData: iii
-  readingNote: {fileID: 0}
+  readingNote: {fileID: 919132148945287133}
+  noteText: {fileID: 1582677667}
   mainCamera: {fileID: 963194227}
   rayDistance: 10
 --- !u!65 &919132148040553852

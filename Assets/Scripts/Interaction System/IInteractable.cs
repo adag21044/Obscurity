@@ -5,5 +5,5 @@ public interface IInteractable
 {
     void Interact();              // Defines the interaction behavior
     string GetDescription();      // Returns the interaction description
-    bool IsAvailable();           // Checks if interaction is possible
+    
 }

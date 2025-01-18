@@ -30,7 +30,7 @@ public class PlayerInteraction : MonoBehaviour
         {
             IInteractable interactable = hit.collider.GetComponent<IInteractable>();
 
-            if (interactable != null && interactable.IsAvailable())
+            if (interactable != null)
             {
                 // Set the current interactable and update the UI
                 currentInteractable = interactable;

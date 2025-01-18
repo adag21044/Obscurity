@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class Note : MonoBehaviour, IInteractable
@@ -6,6 +7,8 @@ public class Note : MonoBehaviour, IInteractable
     public NoteSO noteData; // The note data
     public string objectData;
     public GameObject readingNote;
+    public TMP_Text noteText;
+    public bool isNoteOpened = false;
 
     public string GetDescription()
     {
@@ -17,10 +20,7 @@ public class Note : MonoBehaviour, IInteractable
         throw new System.NotImplementedException();
     }
 
-    public bool IsAvailable()
-    {
-        throw new System.NotImplementedException();
-    }
+    
 
     public Camera mainCamera; // Ana kamera
     public float rayDistance = 10f; // Ray mesafesi
@@ -39,6 +39,12 @@ public class Note : MonoBehaviour, IInteractable
                 {
                     Debug.Log($"Baktığınız obje: {hit.collider.name}");
                     Debug.Log($"Objenin metni: {objScript.objectData}");
+
+                    noteText.text = objScript.objectData;
+                    readingNote.SetActive(true);
+                    isNoteOpened = true;
+
+                    
                 }
                 else
                 {
@@ -49,6 +55,12 @@ public class Note : MonoBehaviour, IInteractable
             {
                 Debug.Log("Hiçbir obje algılanmadı.");
             }
+        }
+        else 
+        if(isNoteOpened && Input.GetKeyDown(KeyCode.Q))
+        {
+            Debug.Log("Close Note");
+            readingNote.SetActive(false);
         }
     }
 }
