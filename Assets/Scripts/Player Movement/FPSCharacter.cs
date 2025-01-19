@@ -1,6 +1,5 @@
 using UnityEngine;
 
-// Coordinates PlayerInput, PlayerMovement, and CameraController
 public class FPSCharacter : MonoBehaviour
 {
     private PlayerInput playerInput;
@@ -18,12 +17,13 @@ public class FPSCharacter : MonoBehaviour
 
     void Update()
     {
-        // Get inputs
+        // Eğer input kilitliyse hareketi durdur
+        if (InputManager.IsMovementLocked()) return;
+
         Vector2 movementInput = playerInput.GetMovementInput();
         Vector2 mouseInput = playerInput.GetMouseInput();
 
-        // Handle camera and movement
-        cameraController.HandleMouseLook(mouseInput);
-        playerMovement.Move(movementInput);
+        cameraController.HandleMouseLook(mouseInput); // Fare hareketi
+        playerMovement.Move(movementInput); // WASD hareketi
     }
 }

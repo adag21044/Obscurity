@@ -1,17 +1,16 @@
 using UnityEngine;
 
-// Handles all player inputs (movement, mouse look)
 public class PlayerInput : MonoBehaviour
 {
     public Vector2 GetMovementInput()
     {
-        // Returns the movement vector from input
+        if (InputManager.IsMovementLocked()) return Vector2.zero; // Hareket kilitliyse giriş yapma
         return new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
     }
 
     public Vector2 GetMouseInput()
     {
-        // Returns the mouse input for rotation
+        if (!InputManager.IsMouseLocked()) return Vector2.zero; // Fare kilitliyse giriş yapma
         return new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
     }
 }
