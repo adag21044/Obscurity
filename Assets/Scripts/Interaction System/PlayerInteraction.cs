@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerInteraction : MonoBehaviour
 {
     public Camera mainCam;                          // Reference to the player's camera
-    public float interactionDistance = 2f;          // Maximum distance to interact with objects
+    public float interactionDistance = 3.5f;          // Maximum distance to interact with objects
     public GameObject interactionUI;                // UI element for interaction prompt
     public TextMeshProUGUI interactionText;         // Text field for interaction description
 

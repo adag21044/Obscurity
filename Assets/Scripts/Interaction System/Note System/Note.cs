@@ -11,8 +11,8 @@ public class Note : MonoBehaviour, IInteractable
     public bool isNoteOpened = false;
 
     public string GetDescription()
-    {
-        throw new System.NotImplementedException();
+    {   
+        return "Click LMB on the note to open it!";
     }
 
     public void Interact()
@@ -62,5 +62,11 @@ public class Note : MonoBehaviour, IInteractable
             Debug.Log("Close Note");
             readingNote.SetActive(false);
         }
+    }
+
+    // Returns whether the object can be collected
+    public bool isCollectable()
+    {
+        return false; // Not collectable
     }
 }

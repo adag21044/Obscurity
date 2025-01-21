@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// This items can be collected and added to the inventory
 public class InteractableItem : MonoBehaviour, IInteractable
 {
     public InteractableSO itemData; // Scriptable Object verisi
@@ -31,5 +32,11 @@ public class InteractableItem : MonoBehaviour, IInteractable
     public string GetDescription()
     {
         return itemData.GetDescription;
+    }
+
+    // Returns whether the object can be collected
+    public bool isCollectable()
+    {
+        return true;
     }
 }

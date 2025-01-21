@@ -28,4 +28,10 @@ public class ColorChanger : MonoBehaviour, IInteractable
     {
         return true; // Always available
     }
+
+    // Returns whether the object can be collected
+    public bool isCollectable()
+    {
+        return false; // Not collectable
+    }
 }
