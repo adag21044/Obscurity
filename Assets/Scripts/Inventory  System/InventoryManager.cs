@@ -5,9 +5,12 @@ public class InventoryManager : MonoBehaviour
 {
     public GameObject inventoryPanel; // Reference to the inventory panel
     private bool isInventoryOpen;      // Flag to check if the inventory is open
+    private DoorBehaviour door;
 
     private void Start()
     {
+        door = FindObjectOfType<DoorBehaviour>();
+        
         if (inventoryPanel == null)
         {
             Debug.LogError("InventoryPanel atanmamış!");

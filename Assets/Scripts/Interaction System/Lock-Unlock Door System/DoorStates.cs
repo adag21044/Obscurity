@@ -1,7 +1,7 @@
 public enum DoorStates 
 {
-    openedDoor,
-    lockedDoor,
-    closedDoor,
+    Opened,
+    Locked,
+    Closed,
     openWithPuzzle
 }
