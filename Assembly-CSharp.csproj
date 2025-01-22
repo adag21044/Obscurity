@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\Player Movement\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PSXPack\PixelationEffect.cs" />
     <Compile Include="Assets\Scripts\Enemy\ICatch.cs" />
+    <Compile Include="Assets\Scripts\Inventory System\Item.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\AreaTrigger.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\CustomVideoPlayer.cs" />
     <Compile Include="Assets\Scripts\Interaction System\PlayerInteraction.cs" />
