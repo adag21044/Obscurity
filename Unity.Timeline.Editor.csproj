@@ -291,9 +291,9 @@
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Manipulators\Sequence\MarkerHeaderTrackManipulator.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Audio\AudioPlayableAssetEditor.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Manipulators\Sequence\RectangleTool.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Utilities\SpacePartitioner.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\inspectors\AnimationTrackInspector.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\TimelineUtility.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Utilities\SpacePartitioner.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Manipulators\Move\MovingItems.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Items\MarkerItem.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Undo\ApplyDefaultUndoAttribute.cs" />

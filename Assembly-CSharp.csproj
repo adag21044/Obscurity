@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Enemy\IFollowable.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\IAction.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\EventManager.cs" />
+    <Compile Include="Assets\Scripts\Inventory System\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\BasePuzzle.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\CollisionTrigger.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Note System\NoteSO.cs" />
@@ -81,15 +82,12 @@
     <Compile Include="Assets\Scripts\Input Lock System\InputManager.cs" />
     <Compile Include="Assets\Scripts\Player Movement\CameraController.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\PickupItemAction.cs" />
-    <Compile Include="Assets\Scripts\Inventory  System\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\PickupItem.cs" />
     <Compile Include="Assets\Scripts\Player Movement\FootSteps.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\IEvent.cs" />
     <Compile Include="Assets\Scripts\Player Movement\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PSXPack\PixelationEffect.cs" />
     <Compile Include="Assets\Scripts\Enemy\ICatch.cs" />
-    <Compile Include="Assets\Scripts\Inventory  System\InventoryManager.cs" />
-    <Compile Include="Assets\Scripts\Inventory  System\InteractableItem.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\AreaTrigger.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\CustomVideoPlayer.cs" />
     <Compile Include="Assets\Scripts\Interaction System\PlayerInteraction.cs" />
@@ -1135,11 +1133,11 @@
     <ProjectReference Include="Unity.EditorCoroutines.Editor.csproj" />
     <ProjectReference Include="Unity.Timeline.Editor.csproj" />
     <ProjectReference Include="Unity.Timeline.csproj" />
-    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj" />
     <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj" />
     <ProjectReference Include="Unity.Mathematics.csproj" />
-    <ProjectReference Include="UnityEngine.UI.csproj" />
     <ProjectReference Include="Unity.VisualScripting.SettingsProvider.Editor.csproj" />
+    <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.csproj" />
+    <ProjectReference Include="UnityEngine.UI.csproj" />
     <ProjectReference Include="Unity.TestTools.CodeCoverage.Editor.csproj" />
     <ProjectReference Include="Unity.PlasticSCM.Editor.csproj" />
     <ProjectReference Include="Unity.Multiplayer.Center.Editor.csproj" />
