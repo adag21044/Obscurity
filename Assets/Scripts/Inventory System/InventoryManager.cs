@@ -51,22 +51,28 @@ public class InventoryManager : MonoBehaviour
         menuActivated = false;
     }
 
-    public void AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
+    public int AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
         if (itemSlot == null || itemSlot.Length == 0)
         {
             Debug.LogError("Item slots are not assigned in the InventoryManager!");
-            return;
+            return 0;
         }
 
         for (int i = 0; i < itemSlot.Length; i++)
         {
-            if (!itemSlot[i].isFull)
+            if (!itemSlot[i].isFull && itemSlot[i].name == name || itemSlot[i].quantity == 0)
             {
-                itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
-                return;
+                int leftOvertItems = itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
+                
+                if(leftOvertItems > 0)
+                    leftOvertItems = AddItem(itemName, leftOvertItems, itemSprite, itemDescription);
+
+                return leftOvertItems;
             }
         }
+
+        return quantity;
 
         Debug.LogWarning("No empty item slots available!");
     }

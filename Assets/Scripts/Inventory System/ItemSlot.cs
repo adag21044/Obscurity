@@ -12,6 +12,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public string itemDescription;
     public Sprite emptySprite;
 
+    [SerializeField] private int maxNumberOfItems;
     [SerializeField] private TMP_Text quantityText;
     [SerializeField] private Image itemImage;
 
@@ -28,23 +29,44 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
     }
 
-    public void AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
+    public int AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
-        if (quantityText == null || itemImage == null)
+        if (isFull)
         {
-            Debug.LogError("quantityText or itemImage is not assigned in the ItemSlot!");
-            return;
+            return quantity;
         }
 
+        // update name
         this.itemName = itemName;
-        this.quantity = quantity;
+        
+        // update sprite
         this.itemSprite = itemSprite;
-        this.itemDescription = itemDescription;
-        isFull = true;
-
-        quantityText.text = quantity.ToString();
-        quantityText.enabled = true;
         itemImage.sprite = itemSprite;
+        
+        // update description  
+        this.itemDescription = itemDescription;
+
+        // update quantity
+        this.quantity += quantity;
+
+        if(this.quantity >= maxNumberOfItems)
+        {
+            quantityText.text = quantity.ToString();
+            quantityText.enabled = true;
+            isFull = true;
+
+            //return leftovers
+            int extrItems = this.quantity - maxNumberOfItems; 
+            this.quantity = maxNumberOfItems;
+            return extrItems;
+        }
+
+        // update quantity text 
+        quantityText.text = this.quantity.ToString();
+        quantityText.enabled = true;
+
+        return 0;
+        
     }
 
     public void OnPointerClick(PointerEventData eventData)
