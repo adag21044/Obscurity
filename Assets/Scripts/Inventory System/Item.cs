@@ -16,10 +16,17 @@ public class Item : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
+            if (inventoryManager == null)
+            {
+                Debug.LogError("InventoryManager is not found!");
+                return;
+            }
+
             inventoryManager.AddItem(itemName, quantity, sprite);
             Destroy(gameObject);
         }
     }
+
 }
