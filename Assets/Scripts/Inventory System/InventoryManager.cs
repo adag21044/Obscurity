@@ -2,23 +2,53 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    public GameObject inventoryMenu;
-    private bool menuActivated;
+    public GameObject inventoryMenu; // Envanter menüsü
+    private bool menuActivated; // Menü açık mı?
     public ItemSlot[] itemSlot;
+    private MouseController mouseController; 
+
+    private void Start()
+    {
+        mouseController = FindObjectOfType<MouseController>();
+    }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Tab) && menuActivated)
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
-            inventoryMenu.SetActive(false);  
-            menuActivated = false;
+            if (menuActivated)
+            {
+                // Envanteri kapat
+                CloseInventory();
+            }
+            else
+            {
+                // Envanteri aç
+                OpenInventory();
+            }
         }
-        else
-        if(Input.GetKeyDown(KeyCode.Tab) && !menuActivated)
-        {
-            inventoryMenu.SetActive(true);
-            menuActivated = true;
-        }   
+    }
+
+    private void OpenInventory()
+    {
+        if (mouseController != null)
+            mouseController.enabled = false; 
+
+        InputManager.LockMouse(false); // Fareyi serbest bırak
+        InputManager.LockMovement(true); // Hareketi kilitle
+        inventoryMenu.SetActive(true); // Menü aktif et
+        menuActivated = true;
+    }
+
+    private void CloseInventory()
+    {
+        if (mouseController != null)
+            mouseController.enabled = true;
+
+        InputManager.LockMouse(true); // Fareyi kilitle
+        InputManager.LockMovement(false); // Hareketi serbest bırak
+        inventoryMenu.SetActive(false); // Menü kapat
+        menuActivated = false;
     }
 
     public void AddItem(string itemName, int quantity, Sprite itemSprite)
@@ -41,4 +71,12 @@ public class InventoryManager : MonoBehaviour
         Debug.LogWarning("No empty item slots available!");
     }
 
+    public void DeselectAllSlots()
+    {
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            itemSlot[i].selectedShader.SetActive(false);
+            itemSlot[i].thisItemSelected = false;
+        }
+    }
 }

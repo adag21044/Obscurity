@@ -6461,7 +6461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemName: Cube
-  quantity: 1
+  quantity: 3
   sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1213657887
 GameObject:
@@ -6835,17 +6835,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300042, guid: 6f053ae833d41ef4aaadf4ef73f9cd75, type: 3}
---- !u!114 &1291210452 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8296408498348992789, guid: 693b93f07efd265418fafeb267310917, type: 3}
-  m_PrefabInstance: {fileID: 6815264043326173575}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1303719451
 GameObject:
   m_ObjectHideFlags: 0
@@ -17600,10 +17589,6 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9183917119118987772, guid: 693b93f07efd265418fafeb267310917, type: 3}
-      propertyPath: itemImage
-      value: 
-      objectReference: {fileID: 1291210452}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
