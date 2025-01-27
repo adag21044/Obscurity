@@ -5,6 +5,7 @@ public class Item : MonoBehaviour
     [SerializeField] private string itemName; // Name of the item
     [SerializeField] private int quantity;
     [SerializeField] private Sprite sprite; // Icon of the item
+    [TextArea][SerializeField] private string itemDescription; // Description of the item 
     
     private InventoryManager inventoryManager;
 
@@ -24,7 +25,7 @@ public class Item : MonoBehaviour
                 return;
             }
 
-            inventoryManager.AddItem(itemName, quantity, sprite);
+            inventoryManager.AddItem(itemName, quantity, sprite, itemDescription);
             Destroy(gameObject);
         }
     }

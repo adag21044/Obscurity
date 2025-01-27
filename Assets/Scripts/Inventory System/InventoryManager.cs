@@ -51,7 +51,7 @@ public class InventoryManager : MonoBehaviour
         menuActivated = false;
     }
 
-    public void AddItem(string itemName, int quantity, Sprite itemSprite)
+    public void AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
         if (itemSlot == null || itemSlot.Length == 0)
         {
@@ -63,7 +63,7 @@ public class InventoryManager : MonoBehaviour
         {
             if (!itemSlot[i].isFull)
             {
-                itemSlot[i].AddItem(itemName, quantity, itemSprite);
+                itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
                 return;
             }
         }
