@@ -82,24 +82,107 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     public void OnLeftClick()
     {
         if(thisItemSelected)
-            inventoryManager.UseItem(itemName);
-
-        inventoryManager.DeselectAllSlots();
-        selectedShader.SetActive(true);
-        thisItemSelected = true;
-        itemDescriptionNameText.text = itemName;
-        itemDescriptionText.text = itemDescription;
-        itemDescripttionImage.sprite = itemSprite;
-
-        if(itemDescripttionImage.sprite == null)
         {
-            itemDescripttionImage.sprite = emptySprite;
+            bool usable = inventoryManager.UseItem(itemName);
+            if(usable)
+            {
+                this.quantity -= 1;
+
+                quantityText.text = this.quantity.ToString();
+
+                if(this.quantity <= 0)
+                    EmptySlot();
+            }
+             
         }
+        else
+        {   
+            inventoryManager.DeselectAllSlots();
+            selectedShader.SetActive(true);
+            thisItemSelected = true;
+            itemDescriptionNameText.text = itemName;
+            itemDescriptionText.text = itemDescription;
+            itemDescripttionImage.sprite = itemSprite;
+
+            if(itemDescripttionImage.sprite == null)
+            {
+                itemDescripttionImage.sprite = emptySprite;
+            }
+        }
+            
+
+        
 
     }
+
+    private void EmptySlot()
+    {
+        Debug.Log("Slot emptied!");
+
+        quantity = 0;
+        isFull = false;
+        itemName = "";
+        itemSprite = emptySprite;
+        itemDescription = "";
+
+        quantityText.enabled = false;
+        itemImage.sprite = emptySprite;
+        itemDescriptionNameText.text = "";
+        itemDescriptionText.text = "";
+        itemDescripttionImage.sprite = emptySprite;
+    }
+
 
     public void OnRightClick()
     {
+        // Oyuncuya uyarı gösterelim
+        Debug.Log("WARNING: You are about to delete one item permanently!");
 
+        // UI üzerinden bir onay ekranı açılmalı (Şimdilik sadece Debug ile gösterelim)
+        bool confirmDelete = ShowConfirmationDialog("Are you sure you want to delete one " + itemName + "? This cannot be undone!");
+
+        if (confirmDelete)
+        {
+            Debug.Log("One item deleted permanently: " + itemName);
+            RemoveSingleItemFromInventory();
+        }
+        else
+        {
+            Debug.Log("Item deletion canceled.");
+        }
     }
+
+
+    private bool ShowConfirmationDialog(string message)
+    {
+        Debug.Log(message + " (Simulating UI popup, return true to confirm)");
+
+        // Normalde bir UI penceresi açmalıyız. Şimdilik her zaman 'true' döndürelim.
+        return true; // TEST için her zaman silinsin, UI eklenince kullanıcıya soracağız.
+    }
+
+    private void RemoveSingleItemFromInventory()
+    {
+        Debug.Log("Removing 1 item from inventory: " + itemName);
+
+        // Eğer 1 tane kaldıysa tamamen sil
+        if (quantity == 1)
+        {
+            Debug.Log("Last item removed, slot will be emptied!");
+            EmptySlot();
+        }
+        else
+        {
+            // 1 tane eksilt
+            quantity -= 1;
+            quantityText.text = quantity.ToString();
+            Debug.Log("New quantity: " + quantity);
+        }
+    }
+
+
+   
+
+
+
 }

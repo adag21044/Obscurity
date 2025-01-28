@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField] private string itemName; // Name of the item
-    [SerializeField] private int quantity;
-    [SerializeField] private Sprite sprite; // Icon of the item
-    [TextArea][SerializeField] private string itemDescription; // Description of the item 
+    public string itemName; // Name of the item
+    public int quantity;
+    public Sprite sprite; // Icon of the item
+    [TextArea]public string itemDescription; // Description of the item 
     
     private InventoryManager inventoryManager;
 

@@ -53,17 +53,20 @@ public class InventoryManager : MonoBehaviour
         menuActivated = false;
     }
 
-    public void UseItem(string itemName)
+    public bool UseItem(string itemName)
     {
         for(int i = 0; i < itemSOs.Length; i++)
         {
             if(itemSOs[i].itemName == itemName)
             {
-                itemSOs[i].UseItem();
-                Debug.Log("Item used: " + itemName);
-                return;
+                bool usable = itemSOs[i].UseItem();
+                return usable;
             }
+
+           
         }
+
+         return false;
     }
 
     public int AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)

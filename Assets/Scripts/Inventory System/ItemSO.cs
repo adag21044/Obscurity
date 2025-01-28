@@ -9,28 +9,35 @@ public class ItemSO : ScriptableObject
     public int amountToChangeStat;
     public int amountToChangeAttribute;
 
-    public void UseItem()
+    public bool UseItem()
     {
         if(statToChange == StatToChange.health)
         {
+            //check if player has enough health
             Debug.Log("Health changed by " + amountToChangeStat);
+            return false;
         }
         else if(statToChange == StatToChange.mana)
         {
             Debug.Log("Mana changed by " + amountToChangeStat);
+            return false;
         }
         else if(statToChange == StatToChange.stamina)
         {
             Debug.Log("Stamina changed by " + amountToChangeStat);
+            return false;
         }
         else if(attributeToChange == AttributesToChange.strength)
         {
             Debug.Log("Strength changed by " + amountToChangeAttribute);
+            return false;
         }
         else if(attributeToChange == AttributesToChange.intelligence)
         {
             Debug.Log("Intelligence changed by " + amountToChangeAttribute);
+            return false;
         }
+        return false;
     }
 
     public enum StatToChange
