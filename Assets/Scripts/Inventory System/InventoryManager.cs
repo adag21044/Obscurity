@@ -6,6 +6,8 @@ public class InventoryManager : MonoBehaviour
     private bool menuActivated; // Menü açık mı?
     public ItemSlot[] itemSlot;
     private MouseController mouseController; 
+    
+    public ItemSO[] itemSOs;
 
     private void Start()
     {
@@ -51,31 +53,54 @@ public class InventoryManager : MonoBehaviour
         menuActivated = false;
     }
 
+    public void UseItem(string itemName)
+    {
+        for(int i = 0; i < itemSOs.Length; i++)
+        {
+            if(itemSOs[i].itemName == itemName)
+            {
+                itemSOs[i].UseItem();
+                Debug.Log("Item used: " + itemName);
+                return;
+            }
+        }
+    }
+
     public int AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
         if (itemSlot == null || itemSlot.Length == 0)
         {
             Debug.LogError("Item slots are not assigned in the InventoryManager!");
-            return 0;
+            return quantity;
         }
 
+        // **1. Aynı isimde bir item var mı kontrol et ve miktarını artır**
         for (int i = 0; i < itemSlot.Length; i++)
         {
-            if (!itemSlot[i].isFull && itemSlot[i].name == name || itemSlot[i].quantity == 0)
+            if (itemSlot[i].isFull && itemSlot[i].itemName == itemName)
             {
-                int leftOvertItems = itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
-                
-                if(leftOvertItems > 0)
-                    leftOvertItems = AddItem(itemName, leftOvertItems, itemSprite, itemDescription);
-
-                return leftOvertItems;
+                Debug.Log("Stacking item: " + itemName);
+                int leftOverItems = itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
+                return leftOverItems; // Eğer fazlalık varsa, döndür.
             }
         }
 
-        return quantity;
+        // **2. Eğer aynı item yoksa, boş bir slot bul ve yeni item ekle**
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            if (!itemSlot[i].isFull) // Boş slot
+            {
+                Debug.Log("Adding new item to slot: " + itemName);
+                int leftOverItems = itemSlot[i].AddItem(itemName, quantity, itemSprite, itemDescription);
+                return leftOverItems; // Eğer kalan varsa, döndür.
+            }
+        }
 
+        // **3. Eğer tüm slotlar doluysa, kalan miktarı döndür**
         Debug.LogWarning("No empty item slots available!");
+        return quantity;
     }
+
 
     public void DeselectAllSlots()
     {

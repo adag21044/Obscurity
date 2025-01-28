@@ -31,43 +31,41 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     public int AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
-        if (isFull)
+        // Eğer slot dolu ama farklı bir item içeriyorsa ekleme yapma
+        if (isFull && this.itemName != itemName)
         {
             return quantity;
         }
 
-        // update name
-        this.itemName = itemName;
-        
-        // update sprite
-        this.itemSprite = itemSprite;
-        itemImage.sprite = itemSprite;
-        
-        // update description  
-        this.itemDescription = itemDescription;
-
-        // update quantity
-        this.quantity += quantity;
-
-        if(this.quantity >= maxNumberOfItems)
+        // Eğer slot boşsa item bilgilerini kaydet
+        if (!isFull)
         {
-            quantityText.text = quantity.ToString();
+            this.itemName = itemName;
+            this.itemSprite = itemSprite;
+            itemImage.sprite = itemSprite;
+            this.itemDescription = itemDescription;
             quantityText.enabled = true;
-            isFull = true;
-
-            //return leftovers
-            int extrItems = this.quantity - maxNumberOfItems; 
-            this.quantity = maxNumberOfItems;
-            return extrItems;
         }
 
-        // update quantity text 
-        quantityText.text = this.quantity.ToString();
-        quantityText.enabled = true;
+        // Miktarı artır
+        this.quantity += quantity;
 
-        return 0;
-        
+        // Eğer maksimum kapasiteyi aşarsa
+        if (this.quantity > maxNumberOfItems)
+        {
+            int extraItems = this.quantity - maxNumberOfItems;
+            this.quantity = maxNumberOfItems;
+            quantityText.text = this.quantity.ToString();
+            isFull = true;
+            return extraItems; // Fazla itemleri döndür
+        }
+
+        // Güncel miktarı UI'da göster
+        quantityText.text = this.quantity.ToString();
+        isFull = this.quantity > 0; // Slot doluluk durumunu güncelle
+        return 0; // Kalan item yok
     }
+
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -83,6 +81,9 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
     public void OnLeftClick()
     {
+        if(thisItemSelected)
+            inventoryManager.UseItem(itemName);
+
         inventoryManager.DeselectAllSlots();
         selectedShader.SetActive(true);
         thisItemSelected = true;
