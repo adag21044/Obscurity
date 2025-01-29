@@ -53,21 +53,7 @@ public class InventoryManager : MonoBehaviour
         menuActivated = false;
     }
 
-    public bool UseItem(string itemName)
-    {
-        for(int i = 0; i < itemSOs.Length; i++)
-        {
-            if(itemSOs[i].itemName == itemName)
-            {
-                bool usable = itemSOs[i].UseItem();
-                return usable;
-            }
-
-           
-        }
-
-         return false;
-    }
+   
 
     public int AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
@@ -113,4 +99,72 @@ public class InventoryManager : MonoBehaviour
             itemSlot[i].thisItemSelected = false;
         }
     }
+
+    public bool UseItem(string itemName)
+    {
+        Debug.Log($"[InventoryManager] Trying to use item: {itemName}");
+
+        // 1️⃣ Önce envanterdeki eşyayı bul
+        ItemSlot targetSlot = null;
+
+        foreach (ItemSlot slot in itemSlot)
+        {
+            if (slot.isFull && slot.itemName == itemName && slot.quantity > 0)
+            {
+                targetSlot = slot;
+                break;
+            }
+        }
+
+        if (targetSlot == null)
+        {
+            Debug.LogWarning($"[InventoryManager] UseItem FAILED: {itemName} envanterde bulunamadı veya kullanılamadı.");
+            return false;
+        }
+
+        // 2️⃣ İlgili `ItemSO` nesnesini bul
+        ItemSO targetItemSO = null;
+
+        foreach (ItemSO item in itemSOs)
+        {
+            if (item.itemName == itemName) 
+            {
+                targetItemSO = item;
+                break;
+            }
+        }
+
+        if (targetItemSO == null)
+        {
+            Debug.LogWarning($"[InventoryManager] UseItem FAILED: {itemName} için ItemSO bulunamadı!");
+            return false;
+        }
+
+        // 3️⃣ Eşyayı kullan
+        bool usable = targetItemSO.UseItem();
+
+        if (usable)
+        {
+            Debug.Log($"[InventoryManager] {itemName} kullanıldı, kalan miktar: {targetSlot.quantity - 1}");
+
+            targetSlot.quantity--;
+
+            if (targetSlot.quantity <= 0)
+            {
+                Debug.Log($"[InventoryManager] {itemName} tükendi, slot temizleniyor.");
+                targetSlot.EmptySlot();
+            }
+            else
+            {
+                targetSlot.quantityText.text = targetSlot.quantity.ToString();
+            }
+
+            return true;
+        }
+
+        Debug.LogWarning($"[InventoryManager] {itemName} kullanılamadı.");
+        return false;
+    }
+
+    
 }

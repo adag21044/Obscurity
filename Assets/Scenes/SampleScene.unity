@@ -994,6 +994,7 @@ MonoBehaviour:
   - {fileID: 1218423343}
   itemSOs:
   - {fileID: 11400000, guid: 73d6bd30c9caee34d9a8cd4b321c7059, type: 2}
+  - {fileID: 11400000, guid: 8edabd8310906584fbc344f964de34d5, type: 2}
 --- !u!1 &162665828
 GameObject:
   m_ObjectHideFlags: 0
@@ -4186,10 +4187,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7708c2ace9a6a484ab54b3d70fa3708f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Cube 2
+  itemName: Coffee
   quantity: 1
   sprite: {fileID: 21300000, guid: f10499d10b29d8f438750e31c7928d0c, type: 3}
   itemDescription: Description Text Test
+  itemSO: {fileID: 11400000, guid: 73d6bd30c9caee34d9a8cd4b321c7059, type: 2}
 --- !u!54 &892277056
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6045,10 +6047,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7708c2ace9a6a484ab54b3d70fa3708f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Cube3
+  itemName: Strong Coffee
   quantity: 1
   sprite: {fileID: 21300000, guid: dd8a2336c46196942aee896cc9f30808, type: 3}
   itemDescription: Description Text Test 2
+  itemSO: {fileID: 11400000, guid: 8edabd8310906584fbc344f964de34d5, type: 2}
 --- !u!54 &1140760444
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6230,10 +6233,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7708c2ace9a6a484ab54b3d70fa3708f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Cube 2
+  itemName: Coffee
   quantity: 1
   sprite: {fileID: 21300000, guid: f10499d10b29d8f438750e31c7928d0c, type: 3}
   itemDescription: Description Text Test
+  itemSO: {fileID: 11400000, guid: 73d6bd30c9caee34d9a8cd4b321c7059, type: 2}
 --- !u!54 &1143930182
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6834,10 +6838,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7708c2ace9a6a484ab54b3d70fa3708f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Cube1
+  itemName: Coffee
   quantity: 1
   sprite: {fileID: 21300000, guid: b150c7a1bd3961649a4dd2c488d6611d, type: 3}
   itemDescription: Description Text Test
+  itemSO: {fileID: 11400000, guid: 73d6bd30c9caee34d9a8cd4b321c7059, type: 2}
 --- !u!1 &1213657887
 GameObject:
   m_ObjectHideFlags: 0
@@ -7843,10 +7848,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7708c2ace9a6a484ab54b3d70fa3708f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Cube3
+  itemName: Strong Coffee
   quantity: 1
   sprite: {fileID: 21300000, guid: dd8a2336c46196942aee896cc9f30808, type: 3}
   itemDescription: Description Text Test 2
+  itemSO: {fileID: 11400000, guid: 8edabd8310906584fbc344f964de34d5, type: 2}
 --- !u!54 &1414920192
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8864,10 +8870,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7708c2ace9a6a484ab54b3d70fa3708f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Cube1
+  itemName: Coffee
   quantity: 1
   sprite: {fileID: 21300000, guid: b150c7a1bd3961649a4dd2c488d6611d, type: 3}
   itemDescription: Description Text Test
+  itemSO: {fileID: 11400000, guid: 73d6bd30c9caee34d9a8cd4b321c7059, type: 2}
 --- !u!54 &1546072758
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -16779,10 +16786,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7708c2ace9a6a484ab54b3d70fa3708f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Cube3
+  itemName: Strong Coffee
   quantity: 1
   sprite: {fileID: 21300000, guid: dd8a2336c46196942aee896cc9f30808, type: 3}
   itemDescription: Description Text Test 2
+  itemSO: {fileID: 11400000, guid: 8edabd8310906584fbc344f964de34d5, type: 2}
 --- !u!54 &2006568229
 Rigidbody:
   m_ObjectHideFlags: 0

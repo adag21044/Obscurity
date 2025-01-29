@@ -8,6 +8,7 @@ public class Item : MonoBehaviour
     [TextArea]public string itemDescription; // Description of the item 
     
     private InventoryManager inventoryManager;
+    public ItemSO itemSO;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

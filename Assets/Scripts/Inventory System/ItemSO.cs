@@ -15,27 +15,27 @@ public class ItemSO : ScriptableObject
         {
             //check if player has enough health
             Debug.Log("Health changed by " + amountToChangeStat);
-            return false;
+            return true;
         }
         else if(statToChange == StatToChange.mana)
         {
             Debug.Log("Mana changed by " + amountToChangeStat);
-            return false;
+            return true;
         }
         else if(statToChange == StatToChange.stamina)
         {
             Debug.Log("Stamina changed by " + amountToChangeStat);
-            return false;
+            return true;
         }
         else if(attributeToChange == AttributesToChange.strength)
         {
             Debug.Log("Strength changed by " + amountToChangeAttribute);
-            return false;
+            return true;
         }
         else if(attributeToChange == AttributesToChange.intelligence)
         {
             Debug.Log("Intelligence changed by " + amountToChangeAttribute);
-            return false;
+            return true;
         }
         return false;
     }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52c346c648bc13b418edc54970928cea, type: 3}
   m_Name: Strong Coffee
   m_EditorClassIdentifier: 
-  itemName: Coffee
+  itemName: Strong Coffee
   statToChange: 1
   attributeToChange: 2
   amountToChangeStat: 2
