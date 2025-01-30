@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\Jumpscare\JumpScareTriggerAction.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\PuzzleManager.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\PuzzleFactory.cs" />
+    <Compile Include="Assets\Scripts\Impulse System\PulseGraph.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\IPuzzle.cs" />
     <Compile Include="Assets\Scripts\Inventory System\ItemSlot.cs" />
   </ItemGroup>
