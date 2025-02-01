@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\Player Movement\FootSteps.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\IEvent.cs" />
     <Compile Include="Assets\Scripts\Player Movement\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\Door System\DoorOpener.cs" />
     <Compile Include="Assets\Scripts\PSXPack\PixelationEffect.cs" />
     <Compile Include="Assets\Scripts\Enemy\ICatch.cs" />
     <Compile Include="Assets\Scripts\Inventory System\Item.cs" />
