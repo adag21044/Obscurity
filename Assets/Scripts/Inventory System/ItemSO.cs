@@ -37,6 +37,11 @@ public class ItemSO : ScriptableObject
             Debug.Log("Intelligence changed by " + amountToChangeAttribute);
             return true;
         }
+        else if(statToChange == StatToChange.unlock)
+        {
+            Debug.Log("Unlocking the door");
+            return true;
+        }
         return false;
     }
 
@@ -45,7 +50,8 @@ public class ItemSO : ScriptableObject
         none,
         health,
         mana,
-        stamina
+        stamina,
+        unlock
     }
 
     public enum AttributesToChange

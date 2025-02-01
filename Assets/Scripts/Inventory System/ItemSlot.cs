@@ -87,25 +87,20 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     // Left-click usage logic
     private void OnLeftClick()
     {
-        if (isProcessing) return; // Prevent re-entrancy if a process is ongoing
-        isProcessing = true; 
+        if (isProcessing) return; // Re-entrancy önlemi
+        isProcessing = true;
 
         if (thisItemSelected)
         {
-            Debug.Log($"[ItemSlot] Attempting to use item: {itemName}");
+            // Eşyayı kullanmak yerine kapıya seçilen item'ı gönderiyoruz.
+            Debug.Log($"[ItemSlot] Attempting to select item: {itemName}");
 
-            bool usable = inventoryManager.UseItem(itemName);
-
-            // Do NOT decrement here because InventoryManager.UseItem already does so.
-            if (usable)
-            {
-                // Just log the result. The actual quantity is updated inside InventoryManager.
-                Debug.Log($"[ItemSlot] {itemName} was used. (Quantity is updated by InventoryManager)");
-            }
+            // Sadece seçili item'ı "kapıya anahtar olarak" veriyoruz:
+            inventoryManager.SelectItem(itemName);
         }
         else
         {
-            // If item wasn't selected, select it and show item details
+            // Henüz seçili değilse, bu slot'u seçip item bilgilerini göster
             inventoryManager.DeselectAllSlots();
             selectedShader.SetActive(true);
             thisItemSelected = true;
@@ -113,6 +108,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
             itemDescriptionText.text = itemDescription;
             itemDescripttionImage.sprite = itemSprite;
 
+            // Eğer sprite boş ise fallback olarak emptySprite göster
             if (itemDescripttionImage.sprite == null)
             {
                 itemDescripttionImage.sprite = emptySprite;
@@ -121,6 +117,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
 
         isProcessing = false;
     }
+
 
     // Empties the slot data
     public void EmptySlot()

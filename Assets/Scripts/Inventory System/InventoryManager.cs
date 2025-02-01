@@ -8,10 +8,17 @@ public class InventoryManager : MonoBehaviour
     private MouseController mouseController; 
     
     public ItemSO[] itemSOs;
+    private DoorOpener currentDoor; // Hangi kapı için envanter açıldı
+    public GameObject wrongItemMessage; // Yanlış eşya mesajı
 
     private void Start()
     {
         mouseController = FindObjectOfType<MouseController>();
+
+        if (wrongItemMessage != null)
+        {
+            wrongItemMessage.SetActive(false);
+        }
     }
 
     private void Update()
@@ -31,7 +38,13 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    private void OpenInventory()
+    public void OpenInventoryForDoor(DoorOpener door)
+    {
+        currentDoor = door;
+        OpenInventory();
+    }
+
+    public void OpenInventory()
     {
         if (mouseController != null)
             mouseController.enabled = false; 
@@ -51,6 +64,27 @@ public class InventoryManager : MonoBehaviour
         InputManager.LockMovement(false); // Hareketi serbest bırak
         inventoryMenu.SetActive(false); // Menü kapat
         menuActivated = false;
+    }
+
+    public void SelectItem(string itemID)
+    {
+        if (currentDoor != null)
+        {
+            currentDoor.TryUnlockWithItem(itemID);
+            CloseInventory(); // Doğru ya da yanlış fark etmez, envanteri kapat
+        }
+    }
+
+    public bool HasItem(string itemName)
+    {
+        foreach (ItemSlot slot in itemSlot)
+        {
+            if (slot.isFull && slot.itemName == itemName)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
    
@@ -127,7 +161,9 @@ public class InventoryManager : MonoBehaviour
 
         foreach (ItemSO item in itemSOs)
         {
-            if (item.itemName == itemName) 
+            Debug.Log($"[DEBUG] Karşılaştırma: {item.itemName} == {itemName} ?");
+
+            if (item.itemName.Trim().ToLower() == itemName.Trim().ToLower()) 
             {
                 targetItemSO = item;
                 break;
