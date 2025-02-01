@@ -12,6 +12,8 @@ public class DoorOpener : MonoBehaviour, IInteractable
     public float rotationDuration = 1f;
     private InventoryManager inventoryManager;
     public GameObject wrongItemMessage; // Yanlış eşya uyarısı
+    public AudioSource audioSource; 
+    public AudioClip doorOpenSound;
 
     private void Start()
     {
@@ -71,6 +73,8 @@ public class DoorOpener : MonoBehaviour, IInteractable
     private IEnumerator RotateDoor()
     {
         Debug.Log("Door is opening");
+        audioSource.PlayOneShot(doorOpenSound);
+
         isAnimating = true;
         float elapsedTime = 0f;
         Quaternion startRotation = transform.rotation;

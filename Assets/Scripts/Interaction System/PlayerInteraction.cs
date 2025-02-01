@@ -11,9 +11,15 @@ public class PlayerInteraction : MonoBehaviour
 
     private IInteractable currentInteractable;      // Currently detected interactable object
 
+    private bool hasInteracted = false;             // Track if the player has interacted
+
     private void Update()
     {
-        DetectInteraction();                        // Check for interactable objects
+        if (!hasInteracted) // if the player has not interacted yet
+        {
+            DetectInteraction();                    // Check for interactable objects
+        }
+
         HandleInput();                              // Handle player input for interactions
     }
 
