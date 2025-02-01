@@ -1,22 +1,21 @@
 using UnityEngine;
+using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour, ICatch, IFollowable
+public class Enemy : MonoBehaviour
 {
-    [SerializeField] private GameObject player; 
+    public Transform target;
+    private NavMeshAgent agent;
+    [SerializeField] private float chaseSpeed = 1.5f;
 
-    public void Update()
+    private void Start()
     {
-        Follow();
-    }
-    
-    public void Catch()
-    {
-        // TODO: Implement the catch logic
+        agent = GetComponent<NavMeshAgent>();
+        agent.speed = chaseSpeed; // Set the speed
     }
 
-    public void Follow()
+    void Update()
     {
-        float speed = 0.15f; // Hareket hızı
-        transform.position = Vector3.Lerp(transform.position, player.transform.position, speed * Time.deltaTime);
+        agent.SetDestination(target.position);   
+        agent.speed = chaseSpeed; // Set the speed
     }
 }

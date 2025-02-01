@@ -13,4 +13,4 @@ public class JumpScareTriggerAction : IAction
     {
         triggerable.Trigger();
     }
-}
+}   
