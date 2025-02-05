@@ -84,10 +84,7 @@ public class ObjectPickUp : MonoBehaviour, IInteractable
     // IInteractable arayüzündeki açıklama metodu
     public string GetDescription()
     {
-        //if (interactableData != null)
-        //{
-        //    return interactableData.GetDescription;
-        //}
+    
         return "Eşyayı al/koy";
     }
 
@@ -103,14 +100,7 @@ public class ObjectPickUp : MonoBehaviour, IInteractable
         }
     }
 
-    /*void UpdateHeldObjectPosition()
-    {
-        float holdDistance = 2.5f;
-        Vector3 targetPosition = Camera.main.transform.position + Camera.main.transform.forward * holdDistance;
-        transform.position = targetPosition;
-        // İstersen rotasyonu da ayarlayabilirsin:
-        // transform.rotation = Quaternion.Lerp(transform.rotation, Camera.main.transform.rotation, Time.deltaTime * 10f);
-    }*/
+   
 
     void UpdateHeldObjectPosition()
     {
@@ -149,8 +139,18 @@ public class ObjectPickUp : MonoBehaviour, IInteractable
 
     private void PlaceOnFrame(Transform frame)
     {
+        Frame frameComponent = frame.GetComponent<Frame>();
+        
+        if(frameComponent == null)
+        {
+            Debug.LogWarning("Çerçeve bileşeni bulunamadı!");
+            return;
+        }
+
         isPickedUp = false;
         transform.SetParent(frame);
+        
+
 
         // RigidBody ayarları, resmin düşmemesi için güncellendi
         if (rb != null)
@@ -166,5 +166,6 @@ public class ObjectPickUp : MonoBehaviour, IInteractable
          
 
         Debug.Log("Resim başarıyla yerleştirildi!"); // Hata ayıklamak için
+        PaintingPuzzleController.Instance.CheckPuzzleCompletion();
     }
 }

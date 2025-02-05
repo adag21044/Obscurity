@@ -1706,11 +1706,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 45e08df3771b6dd41b8cc6a80ff48757, type: 2}
     - target: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_Name
-      value: Sketchfab_2023_01_22_13_46_04 (1)
+      value: Pride
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_TagString
       value: Frame
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063337533856962770, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      propertyPath: m_Name
+      value: Pride
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1734,6 +1738,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 215846284}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 215846285}
   m_SourcePrefab: {fileID: 100100000, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
 --- !u!1 &215846282 stripped
 GameObject:
@@ -1761,6 +1768,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.84, y: 1.2, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &215846285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215846282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f1374232423564ebd0b0adfdcf9d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctPaintingName: Pride
 --- !u!1 &220321204 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1818305758079578, guid: 83e9a4cc29228e449b4e3c86a792e188, type: 3}
@@ -2630,11 +2650,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 45e08df3771b6dd41b8cc6a80ff48757, type: 2}
     - target: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_Name
-      value: Sketchfab_2023_01_22_13_46_04 (6)
+      value: Sloth
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_TagString
       value: Frame
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063337533856962770, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      propertyPath: m_Name
+      value: Sloth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -2658,6 +2682,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 791373171}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 791373172}
   m_SourcePrefab: {fileID: 100100000, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
 --- !u!1 &458400301
 GameObject:
@@ -4371,6 +4398,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.84, y: 1.2, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &791373172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791373169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f1374232423564ebd0b0adfdcf9d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctPaintingName: Sloth
 --- !u!64 &821848882
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4432,6 +4472,58 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.0609531, y: -4.277553, z: 6.6253204}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &825067899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 825067901}
+  - component: {fileID: 825067900}
+  m_Layer: 0
+  m_Name: Painting Puzzle Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &825067900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825067899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b258a00da61b02b40bff36f1db2f1006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frames:
+  - {fileID: 1968370886}
+  - {fileID: 215846285}
+  - {fileID: 1637330580}
+  - {fileID: 845637628}
+  - {fileID: 1335587938}
+  - {fileID: 2097250917}
+  - {fileID: 791373172}
+--- !u!4 &825067901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825067899}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4517,6 +4609,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.84, y: 1.2, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &845637628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845637625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f1374232423564ebd0b0adfdcf9d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctPaintingName: Lust
 --- !u!1 &847237319 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1403389823507892, guid: 83e9a4cc29228e449b4e3c86a792e188, type: 3}
@@ -5154,11 +5259,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 45e08df3771b6dd41b8cc6a80ff48757, type: 2}
     - target: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_Name
-      value: Sketchfab_2023_01_22_13_46_04 (3)
+      value: Lust
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_TagString
       value: Frame
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063337533856962770, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      propertyPath: m_Name
+      value: Lust
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -5182,6 +5291,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 845637627}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 845637628}
   m_SourcePrefab: {fileID: 100100000, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
 --- !u!1 &876878671
 GameObject:
@@ -14176,6 +14288,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.84, y: 1.2, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1335587938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335587935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f1374232423564ebd0b0adfdcf9d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctPaintingName: Envy
 --- !u!1 &1337049300
 GameObject:
   m_ObjectHideFlags: 0
@@ -14649,11 +14774,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 45e08df3771b6dd41b8cc6a80ff48757, type: 2}
     - target: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_Name
-      value: Sketchfab_2023_01_22_13_46_04 (4)
+      value: Envy
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_TagString
       value: Frame
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063337533856962770, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      propertyPath: m_Name
+      value: Envy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -14677,6 +14806,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1335587937}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1335587938}
   m_SourcePrefab: {fileID: 100100000, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
 --- !u!1 &1414920190
 GameObject:
@@ -16071,11 +16203,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 45e08df3771b6dd41b8cc6a80ff48757, type: 2}
     - target: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_Name
-      value: Sketchfab_2023_01_22_13_46_04 (5)
+      value: Gluttony
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_TagString
       value: Frame
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063337533856962770, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      propertyPath: m_Name
+      value: Gluttony
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -16099,6 +16235,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2097250916}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2097250917}
   m_SourcePrefab: {fileID: 100100000, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
 --- !u!1001 &1571969461
 PrefabInstance:
@@ -16485,11 +16624,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 45e08df3771b6dd41b8cc6a80ff48757, type: 2}
     - target: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_Name
-      value: Sketchfab_2023_01_22_13_46_04
+      value: Wrath
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_TagString
       value: Frame
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063337533856962770, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      propertyPath: m_Name
+      value: Wrath
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -16513,6 +16656,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1968370885}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1968370886}
   m_SourcePrefab: {fileID: 100100000, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
 --- !u!1 &1633258388
 GameObject:
@@ -16780,6 +16926,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.84, y: 1.2, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1637330580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637330577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f1374232423564ebd0b0adfdcf9d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctPaintingName: Greed
 --- !u!1001 &1639748372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17513,11 +17672,15 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 45e08df3771b6dd41b8cc6a80ff48757, type: 2}
     - target: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_Name
-      value: Sketchfab_2023_01_22_13_46_04 (2)
+      value: Greed
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_TagString
       value: Frame
+      objectReference: {fileID: 0}
+    - target: {fileID: 9063337533856962770, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      propertyPath: m_Name
+      value: Greed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -17541,6 +17704,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1637330579}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1637330580}
   m_SourcePrefab: {fileID: 100100000, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
 --- !u!64 &1712781556
 MeshCollider:
@@ -24007,6 +24173,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.84, y: 1.2, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1968370886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968370883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f1374232423564ebd0b0adfdcf9d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctPaintingName: Wrath
 --- !u!1 &1972708383
 GameObject:
   m_ObjectHideFlags: 0
@@ -25583,6 +25762,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.84, y: 1.2, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2097250917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097250914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f1374232423564ebd0b0adfdcf9d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctPaintingName: Gluttony
 --- !u!1 &2101705334
 GameObject:
   m_ObjectHideFlags: 0
@@ -26976,3 +27168,4 @@ SceneRoots:
   - {fileID: 1402468329}
   - {fileID: 1553377721}
   - {fileID: 437875797}
+  - {fileID: 825067901}
