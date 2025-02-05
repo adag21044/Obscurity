@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\RotatingPuzzle.cs" />
     <Compile Include="Assets\Scripts\Enemy\IFollowable.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\IAction.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\PickUp System\ObjectPickUp.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\EventManager.cs" />
     <Compile Include="Assets\Scripts\Inventory System\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\BasePuzzle.cs" />
