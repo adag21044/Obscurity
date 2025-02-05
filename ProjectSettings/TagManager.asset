@@ -9,6 +9,8 @@ TagManager:
   - AreaTrigger
   - CollisionTrigger
   - canPickUp
+  - Interactable
+  - Frame
   layers:
   - Default
   - TransparentFX

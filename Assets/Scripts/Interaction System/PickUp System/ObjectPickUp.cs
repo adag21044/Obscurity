@@ -96,6 +96,10 @@ public class ObjectPickUp : MonoBehaviour, IInteractable
         if (isPickedUp)
         {
             UpdateHeldObjectPosition();
+            if (Input.GetMouseButtonDown(0)) // Sol tıklama ile resmi çerçeveye yerleştirme
+            {
+                TryPlaceOnFrame();
+            }
         }
     }
 
@@ -117,8 +121,50 @@ public class ObjectPickUp : MonoBehaviour, IInteractable
         // Vector3.SmoothDamp kullanarak, mevcut pozisyondan hedef pozisyona yumuşak geçiş yapıyoruz.
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref currentVelocity, 1f / smoothSpeed);
 
-        // (Opsiyonel) Rotasyonu da yumuşak geçişle ayarlamak isterseniz:
-        Quaternion targetRotation = Camera.main.transform.rotation;
         
+        
+    }
+
+    private void TryPlaceOnFrame()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, 10f)) // Raycast mesafesini artırdım
+        {
+            Debug.Log("Tıklanan obje: " + hit.collider.name); // Tıklanan objeyi görmek için
+
+            if (hit.collider.CompareTag("Frame")) 
+            {
+                Debug.Log("Çerçeve tespit edildi!"); 
+                PlaceOnFrame(hit.collider.transform);
+            }
+        }
+        else
+        {
+            Debug.Log("Hiçbir objeye tıklanmadı!");
+        }
+    }
+
+
+    private void PlaceOnFrame(Transform frame)
+    {
+        isPickedUp = false;
+        transform.SetParent(frame);
+
+        // RigidBody ayarları, resmin düşmemesi için güncellendi
+        if (rb != null)
+        {
+            rb.isKinematic = true; // Resmi yerine sabitle
+            rb.useGravity = false;
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+
+        // Çerçevenin yüzeyine düzgün hizala
+        transform.localPosition = new Vector3(0, 0, -0.01f); // Resmi hafif önde tut
+         
+
+        Debug.Log("Resim başarıyla yerleştirildi!"); // Hata ayıklamak için
     }
 }
