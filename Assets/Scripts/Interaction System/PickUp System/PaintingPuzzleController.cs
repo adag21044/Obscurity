@@ -5,6 +5,7 @@ public class PaintingPuzzleController : MonoBehaviour
     public static PaintingPuzzleController Instance;
     public Frame[] frames; // Tüm çerçeveleri tutar
     private bool puzzleCompleted = false;
+    public GameObject key;
 
     private void Awake()
     {
