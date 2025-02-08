@@ -30,6 +30,11 @@ public class JumpScare : MonoBehaviour, ITriggerable
         }
     }
 
+    private void Start()
+    {
+        EventManager.GetEvent("OnJumpscareTrigger").AddListener(new JumpScareTriggerAction(this));
+    }
+
     public void Trigger()
     {
         if (jumpscareObject != null)

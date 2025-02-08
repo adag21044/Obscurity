@@ -5,21 +5,32 @@ public class EnemyBar : MonoBehaviour
 {
     public GameObject bar;
     public int time; 
+    private IEvent jumpscareEvent;
+    public JumpScare jumpScare;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        jumpscareEvent = EventManager.GetEvent("OnJumpscareTrigger");
         AnimateBar();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void AnimateBar()
     {
-        LeanTween.scaleX(bar, 1, time);
+        LeanTween.scaleX(bar, 1, time).setOnComplete(TriggerJumpscare);
+    }
+
+    private void TriggerJumpscare()
+    {
+        Debug.Log("Jumpscare triggered as bar is full!");
+
+        if (jumpScare != null)
+        {
+            jumpScare.Trigger();
+        }
+        else
+        {
+            Debug.LogError("JumpScare component is not assigned in the Inspector!");
+        }
     }
 }

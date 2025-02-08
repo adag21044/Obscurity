@@ -24121,6 +24121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bar: {fileID: 1186070514}
   time: 5
+  jumpScare: {fileID: 1894963531}
 --- !u!1 &1911970612
 GameObject:
   m_ObjectHideFlags: 0
