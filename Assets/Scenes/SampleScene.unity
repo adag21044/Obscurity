@@ -13204,6 +13204,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpscareObject: {fileID: 1163291860}
   scareSound: {fileID: 8300000, guid: 47b38cbc562dec2429b63a3f05428813, type: 3}
+  canvasObjects:
+  - {fileID: 1260866512}
+  - {fileID: 194130397}
 --- !u!64 &1169511726
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -16110,6 +16113,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpscareObject: {fileID: 1163291860}
   scareSound: {fileID: 8300000, guid: 47b38cbc562dec2429b63a3f05428813, type: 3}
+  canvasObjects:
+  - {fileID: 1260866512}
+  - {fileID: 194130397}
 --- !u!1 &1517982401
 GameObject:
   m_ObjectHideFlags: 0
@@ -24045,6 +24051,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpscareObject: {fileID: 1163291860}
   scareSound: {fileID: 8300000, guid: 47b38cbc562dec2429b63a3f05428813, type: 3}
+  canvasObjects:
+  - {fileID: 1260866512}
+  - {fileID: 194130397}
 --- !u!65 &1894963532
 BoxCollider:
   m_ObjectHideFlags: 0

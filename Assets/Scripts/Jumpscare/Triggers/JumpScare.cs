@@ -7,6 +7,7 @@ public class JumpScare : MonoBehaviour, ITriggerable
     public AudioClip scareSound; // Jumpscare sesi
     private AudioSource audioSource; // Ses kaynağı
     private VideoPlayer videoPlayer; // Video oynatıcı
+    public GameObject[] canvasObjects; // Canvas objects 
 
     private void Awake()
     {
@@ -39,6 +40,7 @@ public class JumpScare : MonoBehaviour, ITriggerable
     {
         if (jumpscareObject != null)
         {
+            DisableCanvasObjects(canvasObjects);
             jumpscareObject.SetActive(true); // Objeyi etkinleştir
         }
 
@@ -63,6 +65,14 @@ public class JumpScare : MonoBehaviour, ITriggerable
         if (jumpscareObject != null)
         {
             jumpscareObject.SetActive(false); // Video bittiğinde kapat
+        }
+    }
+
+    private void DisableCanvasObjects(GameObject[] canvasObjects)
+    {
+        foreach (var canvasObject in canvasObjects)
+        {
+            canvasObject.SetActive(false);
         }
     }
 }
