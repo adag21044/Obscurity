@@ -7,12 +7,15 @@ public class EnemyBar : MonoBehaviour
     public int time; 
     private IEvent jumpscareEvent;
     public JumpScare jumpScare;
+    public bool isJumpscareAllowed = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         jumpscareEvent = EventManager.GetEvent("OnJumpscareTrigger");
-        AnimateBar();
+
+        if(isJumpscareAllowed)
+            AnimateBar();
     }
 
     private void AnimateBar()
