@@ -181,11 +181,11 @@
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Actions\Invoker.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Attributes\ShortcutAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\inspectors\TrackAssetInspector.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Utilities\Scopes\PropertyScope.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\inspectors\TimelineInspectorUtility.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline\Editor\treeview\TimelineDragging.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Manipulators\TimelineClipGroup.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Utilities\Scopes\PropertyScope.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\inspectors\AnimationPlayableAssetInspector.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline\Editor\treeview\TimelineDragging.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\treeview\Snapping\SnapEngine.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\CustomEditors\CustomTimelineEditorCache.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline\Editor\Manipulators\TimeAreaAutoPanner.cs" />

@@ -367,8 +367,8 @@
     <Compile Include="Library\PackageCache\com.unity.collab-proxy\Editor\UI\UIElements\UIElementsExtensions.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy\Editor\SceneView\DrawSceneOperations.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy\Editor\ApplicationDataPath.cs" />
-    <Compile Include="Library\PackageCache\com.unity.collab-proxy\Editor\AssetsUtils\Processor\WorkspaceOperationsMonitor.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy\Editor\UI\Tree\TreeHeaderSettings.cs" />
+    <Compile Include="Library\PackageCache\com.unity.collab-proxy\Editor\AssetsUtils\Processor\WorkspaceOperationsMonitor.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy\Editor\Views\Branch\BranchesListHeaderState.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy\Editor\Configuration\MissingEncryptionPasswordPromptHandler.cs" />
     <Compile Include="Library\PackageCache\com.unity.collab-proxy\Editor\UI\Tree\ListViewItemIds.cs" />

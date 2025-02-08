@@ -133,8 +133,8 @@
     <Compile Include="Library\PackageCache\com.unity.serialization\Runtime\Unity.Serialization\Json\JsonSerialization+FromJson.cs" />
     <Compile Include="Library\PackageCache\com.unity.serialization\Runtime\Unity.Serialization\Json\Views\Internal\UnsafeObjectView.cs" />
     <Compile Include="Library\PackageCache\com.unity.serialization\Runtime\Unity.Serialization\Binary\BinarySerialization.cs" />
-    <Compile Include="Library\PackageCache\com.unity.serialization\Runtime\Unity.Serialization\Json\Validation\Internal\JsonTypeStack.cs" />
     <Compile Include="Library\PackageCache\com.unity.serialization\Runtime\Unity.Serialization\Utility\Attributes.cs" />
+    <Compile Include="Library\PackageCache\com.unity.serialization\Runtime\Unity.Serialization\Json\Validation\Internal\JsonTypeStack.cs" />
     <Compile Include="Library\PackageCache\com.unity.serialization\Runtime\Unity.Serialization\Json\Views\Internal\UnsafeArrayView.cs" />
     <Compile Include="Library\PackageCache\com.unity.serialization\Runtime\Unity.Serialization\Json\Views\Internal\UnsafeView.cs" />
     <Compile Include="Library\PackageCache\com.unity.serialization\Runtime\Unity.Serialization\Json\Validation\Internal\JsonValidator+Standard.cs" />
