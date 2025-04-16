@@ -166,6 +166,6 @@ public class ObjectPickUp : MonoBehaviour, IInteractable
          
 
         Debug.Log("Resim başarıyla yerleştirildi!"); // Hata ayıklamak için
-        PaintingPuzzleController.Instance.CheckPuzzleCompletion();
+        
     }
 }

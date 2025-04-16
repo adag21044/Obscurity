@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 7366853}
   - component: {fileID: 7366852}
   - component: {fileID: 7366854}
+  - component: {fileID: 7366855}
   m_Layer: 7
   m_Name: Envy
   m_TagString: canPickUp
@@ -399,6 +400,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.000001, y: 1.4233059e-13, z: 10.000004}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7366855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7366847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d458ebf86a35bde4ba90e9f194d5c2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: fc28e66ad8811b046a8291a229cc30c1, type: 2}
 --- !u!64 &25986735
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -874,6 +888,7 @@ GameObject:
   - component: {fileID: 113531845}
   - component: {fileID: 113531844}
   - component: {fileID: 113531846}
+  - component: {fileID: 113531847}
   m_Layer: 7
   m_Name: Gluttony
   m_TagString: canPickUp
@@ -1015,6 +1030,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.000001, y: 1.4233059e-13, z: 10.000004}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &113531847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113531839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d458ebf86a35bde4ba90e9f194d5c2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 97a352fd9904086448b86f2c29199faf, type: 2}
 --- !u!1 &121945256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,7 +1894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9063337533856962770, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_Name
-      value: Pride
+      value: .
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1893,6 +1921,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 215846285}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 215846287}
   m_SourcePrefab: {fileID: 100100000, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
 --- !u!1 &215846282 stripped
 GameObject:
@@ -1932,7 +1963,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f1374232423564ebd0b0adfdcf9d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctPainting: {fileID: 11400000, guid: 8d019a28e14924d42a0e3aeaf1bcedae, type: 2}
   correctPaintingName: Pride
+--- !u!114 &215846287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215846282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f0d72e88d4b164887adfdf5f9a11ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &220321204 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1818305758079578, guid: 83e9a4cc29228e449b4e3c86a792e188, type: 3}
@@ -2810,7 +2854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9063337533856962770, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_Name
-      value: Sloth
+      value: .
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -2837,6 +2881,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 791373172}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 791373174}
   m_SourcePrefab: {fileID: 100100000, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
 --- !u!1 &458400301
 GameObject:
@@ -4670,7 +4717,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f1374232423564ebd0b0adfdcf9d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctPainting: {fileID: 11400000, guid: 203c2df47b7a7e14dafb7eaa21aca585, type: 2}
   correctPaintingName: Sloth
+--- !u!114 &791373174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791373169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f0d72e88d4b164887adfdf5f9a11ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!64 &821848882
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4774,7 +4834,7 @@ MonoBehaviour:
   - {fileID: 1335587938}
   - {fileID: 2097250917}
   - {fileID: 791373172}
-  key: {fileID: 0}
+  key: {fileID: 959964117}
 --- !u!4 &825067901
 Transform:
   m_ObjectHideFlags: 0
@@ -4882,7 +4942,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f1374232423564ebd0b0adfdcf9d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctPainting: {fileID: 11400000, guid: fa8e271a06f26f342944d59be996784a, type: 2}
   correctPaintingName: Lust
+--- !u!114 &845637630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 845637625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f0d72e88d4b164887adfdf5f9a11ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &847237319 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1403389823507892, guid: 83e9a4cc29228e449b4e3c86a792e188, type: 3}
@@ -5528,7 +5601,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9063337533856962770, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_Name
-      value: Lust
+      value: .
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -5555,6 +5628,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 845637628}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 845637630}
   m_SourcePrefab: {fileID: 100100000, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
 --- !u!1 &876878671
 GameObject:
@@ -10981,6 +11057,7 @@ GameObject:
   - component: {fileID: 916285834}
   - component: {fileID: 916285833}
   - component: {fileID: 916285835}
+  - component: {fileID: 916285836}
   m_Layer: 7
   m_Name: Lust
   m_TagString: canPickUp
@@ -11122,6 +11199,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.000001, y: 1.4233059e-13, z: 10.000004}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &916285836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916285828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d458ebf86a35bde4ba90e9f194d5c2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: fa8e271a06f26f342944d59be996784a, type: 2}
 --- !u!1 &916526411
 GameObject:
   m_ObjectHideFlags: 0
@@ -11403,6 +11493,10 @@ PrefabInstance:
     - target: {fileID: 374289202576707483, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
       propertyPath: m_Name
       value: rust_key
+      objectReference: {fileID: 0}
+    - target: {fileID: 374289202576707483, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3705028537381535112, guid: 78df1db2fbc8ec64f949fac0c05bf693, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12533,6 +12627,7 @@ GameObject:
   - component: {fileID: 1081661775}
   - component: {fileID: 1081661774}
   - component: {fileID: 1081661776}
+  - component: {fileID: 1081661777}
   m_Layer: 7
   m_Name: Pride
   m_TagString: canPickUp
@@ -12674,6 +12769,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.000001, y: 1.4233059e-13, z: 10.000004}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1081661777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081661769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d458ebf86a35bde4ba90e9f194d5c2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 8d019a28e14924d42a0e3aeaf1bcedae, type: 2}
 --- !u!1 &1101383987
 GameObject:
   m_ObjectHideFlags: 0
@@ -14880,7 +14988,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f1374232423564ebd0b0adfdcf9d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctPainting: {fileID: 11400000, guid: fc28e66ad8811b046a8291a229cc30c1, type: 2}
   correctPaintingName: Envy
+--- !u!114 &1335587940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335587935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f0d72e88d4b164887adfdf5f9a11ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1337049300
 GameObject:
   m_ObjectHideFlags: 0
@@ -15362,7 +15483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9063337533856962770, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_Name
-      value: Envy
+      value: .
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -15389,6 +15510,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1335587938}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1335587940}
   m_SourcePrefab: {fileID: 100100000, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
 --- !u!1 &1414920190
 GameObject:
@@ -15791,6 +15915,7 @@ GameObject:
   - component: {fileID: 1432361029}
   - component: {fileID: 1432361028}
   - component: {fileID: 1432361030}
+  - component: {fileID: 1432361031}
   m_Layer: 7
   m_Name: Wrath
   m_TagString: canPickUp
@@ -15932,6 +16057,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.000001, y: 1.4233059e-13, z: 10.000004}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1432361031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432361023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d458ebf86a35bde4ba90e9f194d5c2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 48e4764a9e72a64479c67e6512b84a91, type: 2}
 --- !u!1001 &1440237557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17347,7 +17485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9063337533856962770, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_Name
-      value: Gluttony
+      value: .
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -17374,6 +17512,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2097250917}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2097250919}
   m_SourcePrefab: {fileID: 100100000, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
 --- !u!1 &1571667165
 GameObject:
@@ -17876,7 +18017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9063337533856962770, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_Name
-      value: Wrath
+      value: .
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -17903,6 +18044,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1968370886}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1968370888}
   m_SourcePrefab: {fileID: 100100000, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
 --- !u!1 &1633258388
 GameObject:
@@ -18182,7 +18326,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f1374232423564ebd0b0adfdcf9d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctPainting: {fileID: 11400000, guid: e597466a45271c9448a76424755d8e2c, type: 2}
   correctPaintingName: Greed
+--- !u!114 &1637330582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637330577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f0d72e88d4b164887adfdf5f9a11ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1639748372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18380,6 +18537,7 @@ GameObject:
   - component: {fileID: 1676226190}
   - component: {fileID: 1676226189}
   - component: {fileID: 1676226191}
+  - component: {fileID: 1676226192}
   m_Layer: 7
   m_Name: Greed
   m_TagString: canPickUp
@@ -18521,6 +18679,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.000001, y: 1.4233059e-13, z: 10.000004}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1676226192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676226184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d458ebf86a35bde4ba90e9f194d5c2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: e597466a45271c9448a76424755d8e2c, type: 2}
 --- !u!1 &1683772045
 GameObject:
   m_ObjectHideFlags: 0
@@ -18924,7 +19095,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9063337533856962770, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       propertyPath: m_Name
-      value: Greed
+      value: .
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -18951,6 +19122,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1637330580}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1637330582}
   m_SourcePrefab: {fileID: 100100000, guid: 4f332c5f6ba552941a293d2abc76ee9b, type: 3}
 --- !u!64 &1712781556
 MeshCollider:
@@ -21226,7 +21400,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f1374232423564ebd0b0adfdcf9d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctPainting: {fileID: 11400000, guid: 48e4764a9e72a64479c67e6512b84a91, type: 2}
   correctPaintingName: Wrath
+--- !u!114 &1968370888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968370883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f0d72e88d4b164887adfdf5f9a11ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1972708383
 GameObject:
   m_ObjectHideFlags: 0
@@ -22890,7 +23077,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f1374232423564ebd0b0adfdcf9d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctPainting: {fileID: 11400000, guid: 97a352fd9904086448b86f2c29199faf, type: 2}
   correctPaintingName: Gluttony
+--- !u!114 &2097250919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097250914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f0d72e88d4b164887adfdf5f9a11ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2101705334
 GameObject:
   m_ObjectHideFlags: 0
@@ -23141,6 +23341,7 @@ GameObject:
   - component: {fileID: 2122545521}
   - component: {fileID: 2122545520}
   - component: {fileID: 2122545522}
+  - component: {fileID: 2122545523}
   m_Layer: 7
   m_Name: Sloth
   m_TagString: canPickUp
@@ -23282,6 +23483,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.000001, y: 1.4233059e-13, z: 10.000004}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2122545523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2122545515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d458ebf86a35bde4ba90e9f194d5c2f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: 203c2df47b7a7e14dafb7eaa21aca585, type: 2}
 --- !u!4 &543450651686305956
 Transform:
   m_ObjectHideFlags: 0
