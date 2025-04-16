@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Item : MonoBehaviour, IInteractable
 {
     public string itemName; // Name of the item
     public int quantity;
@@ -9,6 +9,8 @@ public class Item : MonoBehaviour
     
     private InventoryManager inventoryManager;
     public ItemSO itemSO;
+
+    private bool canInteract = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,24 +23,28 @@ public class Item : MonoBehaviour
         inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
     }
 
-    void OnCollisionEnter(Collision other)
+
+    public void Interact()
     {
-        if (other.gameObject.tag == "Player")
+        if (!canInteract || inventoryManager == null)
         {
-            if (inventoryManager == null)
-            {
-                Debug.LogError("InventoryManager is not found!");
-                return;
-            }
+            return;
+        }
 
-            int leftOverItems = inventoryManager.AddItem(itemName, quantity, sprite, itemDescription);
-            
-            if (leftOverItems <= 0)
-                Destroy(gameObject);
-            else
-                quantity = leftOverItems;
+        int leftOverItems = inventoryManager.AddItem(itemName, quantity, sprite, itemDescription);
 
+        if (leftOverItems <= 0)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            quantity = leftOverItems;
         }
     }
 
+    public string GetDescription()
+    {
+        return "Press E to pick up " + itemName;
+    }
 }

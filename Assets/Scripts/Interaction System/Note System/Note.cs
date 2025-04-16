@@ -12,12 +12,12 @@ public class Note : MonoBehaviour, IInteractable
 
     public string GetDescription()
     {
-        throw new System.NotImplementedException();
+        return "";
     }
 
     public void Interact()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     
