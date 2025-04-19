@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\Interaction System\InteractableSO.cs" />
     <Compile Include="Assets\Scripts\Input Lock System\InputManager.cs" />
     <Compile Include="Assets\Scripts\Player Movement\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\Puzzle System\Rotating Puzzle\RotationPuzzleManager.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\PickupItemAction.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\PickupItem.cs" />
@@ -117,7 +118,9 @@
     <Compile Include="Assets\Scripts\Inventory System\Item.cs" />
     <Compile Include="Assets\LeanTween\Testing\Scripts\LeanPool.cs" />
     <Compile Include="Assets\LeanTween\Testing\PerformanceTests.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\Puzzle System\Rotating Puzzle\RightRotation.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\AreaTrigger.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\Puzzle System\Rotating Puzzle\RotatingPuzzlePiece.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\CustomVideoPlayer.cs" />
     <Compile Include="Assets\LeanTween\Testing\Testing246.cs" />
     <Compile Include="Assets\Scripts\Interaction System\PlayerInteraction.cs" />
