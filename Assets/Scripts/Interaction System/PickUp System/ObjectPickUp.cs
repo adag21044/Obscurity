@@ -33,6 +33,8 @@ public class ObjectPickUp : MonoBehaviour, IInteractable
         }
     }
 
+    
+
     // IInteractable arayüzündeki metot; oyuncu etkileşime geçtiğinde çağrılır.
     public void Interact()
     {
@@ -72,6 +74,35 @@ public class ObjectPickUp : MonoBehaviour, IInteractable
     public void Drop()
     {
         isPickedUp = false;
+
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, 5f)) // 5 birimlik menzil, istersen artır
+        {
+            if (hit.collider.CompareTag("Frame"))
+            {
+                Debug.Log("Frame detected!");
+                // Eşya çerçevenin alt objesi olur
+                transform.SetParent(hit.collider.transform);
+
+                // Pozisyonu düzelt (örnek olarak çerçevenin ortasına koyulabilir)
+                transform.localPosition = Vector3.zero;
+
+                Debug.Log($"📥 Object placed into frame: {hit.collider.name}");
+
+                if (rb != null)
+                {
+                    rb.isKinematic = true;
+                    rb.useGravity = false;
+                }
+
+                Check.Instance.CheckPuzzle();
+                return;
+            }
+        }
+
+        // Hiçbir çerçeveye yerleştirilemediyse eski yerine bırak
         transform.SetParent(originalParent);
 
         if (rb != null)
@@ -80,6 +111,7 @@ public class ObjectPickUp : MonoBehaviour, IInteractable
             rb.useGravity = true;
         }
     }
+
 
     // IInteractable arayüzündeki açıklama metodu
     public string GetDescription()
@@ -93,11 +125,14 @@ public class ObjectPickUp : MonoBehaviour, IInteractable
         if (isPickedUp)
         {
             UpdateHeldObjectPosition();
-            if (Input.GetMouseButtonDown(0)) // Sol tıklama ile resmi çerçeveye yerleştirme
+            
+            // Sol tıkla bırakma
+            if (Input.GetMouseButtonDown(0))
             {
-                TryPlaceOnFrame();
+                Drop();
             }
         }
+        
     }
 
    
@@ -111,61 +146,14 @@ public class ObjectPickUp : MonoBehaviour, IInteractable
         // Vector3.SmoothDamp kullanarak, mevcut pozisyondan hedef pozisyona yumuşak geçiş yapıyoruz.
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref currentVelocity, 1f / smoothSpeed);
 
+        // Puzzle kontrolü yapılıyor
+        Check.Instance.CheckPuzzle();
         
         
     }
 
-    private void TryPlaceOnFrame()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, 10f)) // Raycast mesafesini artırdım
-        {
-            Debug.Log("Tıklanan obje: " + hit.collider.name); // Tıklanan objeyi görmek için
-
-            if (hit.collider.CompareTag("Frame")) 
-            {
-                Debug.Log("Çerçeve tespit edildi!"); 
-                PlaceOnFrame(hit.collider.transform);
-            }
-        }
-        else
-        {
-            Debug.Log("Hiçbir objeye tıklanmadı!");
-        }
-    }
+    
 
 
-    private void PlaceOnFrame(Transform frame)
-    {
-        Frame frameComponent = frame.GetComponent<Frame>();
-        
-        if(frameComponent == null)
-        {
-            Debug.LogWarning("Çerçeve bileşeni bulunamadı!");
-            return;
-        }
-
-        isPickedUp = false;
-        transform.SetParent(frame);
-        
-
-
-        // RigidBody ayarları, resmin düşmemesi için güncellendi
-        if (rb != null)
-        {
-            rb.isKinematic = true; // Resmi yerine sabitle
-            rb.useGravity = false;
-            rb.linearVelocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-        }
-
-        // Çerçevenin yüzeyine düzgün hizala
-        transform.localPosition = new Vector3(0, 0, -0.01f); // Resmi hafif önde tut
-         
-
-        Debug.Log("Resim başarıyla yerleştirildi!"); // Hata ayıklamak için
-        
-    }
+    
 }

@@ -66,8 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\RotatingPuzzle.cs" />
-    <Compile Include="Assets\Scripts\Enemy\IFollowable.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\PickUp System\Painting Puzzle\Picture.cs" />
     <Compile Include="Assets\Scripts\Interaction System\PickUp System\Painting Puzzle\PictureSO.cs" />
+    <Compile Include="Assets\Scripts\Enemy\IFollowable.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\IAction.cs" />
     <Compile Include="Assets\Scripts\Interaction System\PickUp System\ObjectPickUp.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTest.cs" />
@@ -76,7 +77,9 @@
     <Compile Include="Assets\Scripts\Inventory System\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\BasePuzzle.cs" />
     <Compile Include="Assets\Scripts\Inventory System\ItemSO.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\PickUp System\Painting Puzzle\FrameSO.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\CollisionTrigger.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\PickUp System\Painting Puzzle\Check.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Note System\NoteSO.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\ITriggerable.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Note System\Note.cs" />
@@ -89,7 +92,6 @@
     <Compile Include="Assets\Scripts\Interaction System\InteractableSO.cs" />
     <Compile Include="Assets\Scripts\Input Lock System\InputManager.cs" />
     <Compile Include="Assets\Scripts\Player Movement\CameraController.cs" />
-    <Compile Include="Assets\Scripts\Interaction System\PickUp System\Painting Puzzle\PaintingDropTrigger.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\PickupItemAction.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTweenExt.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\PickupItem.cs" />
@@ -101,7 +103,6 @@
     <Compile Include="Assets\Scripts\Interaction System\PickUp System\Painting Puzzle\Frame.cs" />
     <Compile Include="Assets\LeanTween\Framework\LTDescr.cs" />
     <Compile Include="Assets\Scripts\Player Movement\FootSteps.cs" />
-    <Compile Include="Assets\Scripts\Interaction System\PickUp System\Painting Puzzle\PaintingPuzzleController.cs" />
     <Compile Include="Assets\LeanTween\Testing\TestingIssue2.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\IEvent.cs" />
     <Compile Include="Assets\LeanTween\Testing\Testing248.cs" />
@@ -116,7 +117,6 @@
     <Compile Include="Assets\Scripts\Inventory System\Item.cs" />
     <Compile Include="Assets\LeanTween\Testing\Scripts\LeanPool.cs" />
     <Compile Include="Assets\LeanTween\Testing\PerformanceTests.cs" />
-    <Compile Include="Assets\Scripts\Interaction System\PickUp System\Painting Puzzle\PaintingSO.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\AreaTrigger.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\CustomVideoPlayer.cs" />
     <Compile Include="Assets\LeanTween\Testing\Testing246.cs" />
@@ -128,7 +128,6 @@
     <Compile Include="Assets\Scripts\Interaction System\Color Changer.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\JumpScare.cs" />
     <Compile Include="Assets\LeanTween\Framework\LTSeq.cs" />
-    <Compile Include="Assets\Scripts\Interaction System\PickUp System\Painting Puzzle\Painting.cs" />
     <Compile Include="Assets\Scripts\Interaction System\IInteractable.cs" />
     <Compile Include="Assets\LeanTween\Framework\LeanTween.cs" />
     <Compile Include="Assets\Scripts\Player Movement\FPSCharacter.cs" />
