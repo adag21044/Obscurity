@@ -13,6 +13,19 @@ public class PlayerInteraction : MonoBehaviour
 
     private bool hasInteracted = false;             // Track if the player has interacted
 
+    private GameObject lastOutlinedObject; // Store last object we looked at
+
+    void Start()
+    {
+        // Oyunun başında tüm Outline component'lerini kapat
+        Outline[] allOutlines = FindObjectsOfType<Outline>();
+        foreach (var outline in allOutlines)
+        {
+            outline.enabled = false;
+        }
+    }
+
+
     private void Update()
     {
         if (!hasInteracted) // if the player has not interacted yet
@@ -32,20 +45,38 @@ public class PlayerInteraction : MonoBehaviour
         currentInteractable = null;                // Reset current interactable
         interactionUI.SetActive(false);            // Hide interaction UI
                                
+        // Disable previous outline if needed
+        if (lastOutlinedObject != null)
+        {
+            Outline previousOutline = lastOutlinedObject.GetComponent<Outline>();
+            if (previousOutline != null)
+            {
+                previousOutline.enabled = false;
+            }
+            lastOutlinedObject = null;
+        }
 
 
         if (Physics.Raycast(ray, out hit, interactionDistance))
         {
-            IInteractable interactable = hit.collider.GetComponent<IInteractable>();
+            // Try to enable outline even if it's not interactable
+            Outline outline = hit.collider.GetComponent<Outline>();
+            if (outline != null)
+            {
+                outline.enabled = true;
+                lastOutlinedObject = hit.collider.gameObject;
+            }
 
+            // Optional: show UI only if interactable
+            IInteractable interactable = hit.collider.GetComponent<IInteractable>();
             if (interactable != null)
             {
-                // Set the current interactable and update the UI
                 currentInteractable = interactable;
                 interactionText.text = interactable.GetDescription();
                 interactionUI.SetActive(true);
             }
         }
+        
     }
 
     // Handles player input for interacting with objects
