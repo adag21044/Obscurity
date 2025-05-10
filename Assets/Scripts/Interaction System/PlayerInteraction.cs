@@ -31,6 +31,8 @@ public class PlayerInteraction : MonoBehaviour
 
         currentInteractable = null;                // Reset current interactable
         interactionUI.SetActive(false);            // Hide interaction UI
+                               
+
 
         if (Physics.Raycast(ray, out hit, interactionDistance))
         {

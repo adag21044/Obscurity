@@ -11,6 +11,7 @@ TagManager:
   - canPickUp
   - Interactable
   - Frame
+  - HoldPoint
   layers:
   - Default
   - TransparentFX

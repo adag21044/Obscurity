@@ -3880,7 +3880,7 @@ GameObject:
   - component: {fileID: 595935173}
   m_Layer: 0
   m_Name: pickUpCamera
-  m_TagString: Untagged
+  m_TagString: HoldPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4431,6 +4431,7 @@ GameObject:
   - component: {fileID: 729399106}
   - component: {fileID: 729399111}
   - component: {fileID: 729399110}
+  - component: {fileID: 729399112}
   m_Layer: 0
   m_Name: Test Pickup Object
   m_TagString: Untagged
@@ -4573,6 +4574,24 @@ MonoBehaviour:
   holdPoint: {fileID: 595935171}
   holdDistance: 2.5
   smoothSpeed: 10
+--- !u!114 &729399112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729399105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &737505885 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1693633287523976, guid: 83e9a4cc29228e449b4e3c86a792e188, type: 3}
@@ -14158,6 +14177,7 @@ GameObject:
   - component: {fileID: 1212559598}
   - component: {fileID: 1212559602}
   - component: {fileID: 1212559603}
+  - component: {fileID: 1212559604}
   m_Layer: 0
   m_Name: Collectible Test Item - Red
   m_TagString: Untagged
@@ -14298,6 +14318,24 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: b150c7a1bd3961649a4dd2c488d6611d, type: 3}
   itemDescription: Description Text Test
   itemSO: {fileID: 11400000, guid: 73d6bd30c9caee34d9a8cd4b321c7059, type: 2}
+--- !u!114 &1212559604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212559597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1213657887
 GameObject:
   m_ObjectHideFlags: 0

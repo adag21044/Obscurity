@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour, IInteractable
 {
+    Outline outline; // Reference to the Outline component
     public string itemName; // Name of the item
     public int quantity;
     public Sprite sprite; // Icon of the item
@@ -21,8 +22,24 @@ public class Item : MonoBehaviour, IInteractable
         }
         
         inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+        outline = GetComponent<Outline>(); // Get the Outline component attached to the GameObject
+        DisableOutline(); // Disable the outline at the start
     }
 
+    public void DisableOutline()
+    {
+        if (outline != null)
+        {
+            outline.enabled = false; // Disable the outline when not interacting
+        }
+    }
+    public void EnableOutline()
+    {
+        if (outline != null)
+        {
+            outline.enabled = true; // Enable the outline when interacting
+        }
+    }
 
     public void Interact()
     {
