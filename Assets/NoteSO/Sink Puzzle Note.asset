@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c151fe804080f95489bd85569f660c4e, type: 3}
   m_Name: Sink Puzzle Note
   m_EditorClassIdentifier: 
-  content: 'First, open the one to the right of the first.
+  content: 'First, open the one to the left of the second.
 
     Then, close the one
     to the left of the third.
