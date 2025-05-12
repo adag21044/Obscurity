@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Jumpscare\EventManager.cs" />
     <Compile Include="Assets\LeanTween\Testing\TestingDescr.cs" />
     <Compile Include="Assets\Scripts\Inventory System\InventoryManager.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\Sink Puzzle\SinkPuzzle.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\BasePuzzle.cs" />
     <Compile Include="Assets\Scripts\Inventory System\ItemSO.cs" />
     <Compile Include="Assets\Scripts\Interaction System\PickUp System\Painting Puzzle\FrameSO.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Assets\LeanTween\Framework\LTDescrOptional.cs" />
     <Compile Include="Assets\LeanTween\Testing\TestingIssue.cs" />
     <Compile Include="Assets\LeanTween\Testing\FollowingTests.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\Sink Puzzle\DoorState.cs" />
     <Compile Include="Assets\LeanTween\Testing\TestingOptionalCancel.cs" />
     <Compile Include="Assets\Scripts\Interaction System\PickUp System\Painting Puzzle\Frame.cs" />
     <Compile Include="Assets\LeanTween\Framework\LTDescr.cs" />
@@ -121,6 +123,7 @@
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\Rotating Puzzle\RightRotation.cs" />
     <Compile Include="Assets\LeanTween\Testing\PerformanceTests.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\AreaTrigger.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\Sink Puzzle\SP_DoorOpener.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\Rotating Puzzle\RotatingPuzzlePiece.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\CustomVideoPlayer.cs" />
     <Compile Include="Assets\LeanTween\Testing\Testing246.cs" />
