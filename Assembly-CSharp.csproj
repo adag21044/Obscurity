@@ -65,6 +65,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.31f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Interaction System\Sink Puzzle\WatchAndOpen.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\RotatingPuzzle.cs" />
     <Compile Include="Assets\Scripts\Interaction System\PickUp System\Painting Puzzle\Picture.cs" />
     <Compile Include="Assets\Scripts\Interaction System\PickUp System\Painting Puzzle\PictureSO.cs" />
@@ -125,6 +126,7 @@
     <Compile Include="Assets\Scripts\Jumpscare\Triggers\AreaTrigger.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Sink Puzzle\SP_DoorOpener.cs" />
     <Compile Include="Assets\Scripts\Interaction System\Puzzle System\Rotating Puzzle\RotatingPuzzlePiece.cs" />
+    <Compile Include="Assets\Scripts\Interaction System\Door System\OpenAfterPuzzleSolved.cs" />
     <Compile Include="Assets\Scripts\Jumpscare\CustomVideoPlayer.cs" />
     <Compile Include="Assets\LeanTween\Testing\Testing246.cs" />
     <Compile Include="Assets\Scripts\Interaction System\PlayerInteraction.cs" />

@@ -7,16 +7,27 @@ public class DoorOpener : MonoBehaviour, IInteractable
     public bool isLocked = true;
     private bool isOpen = false;
     private bool isAnimating = false;
-    private Quaternion closedRotation;
-    private Quaternion openRotation;
+    [SerializeField]private Quaternion closedRotation;
+    [SerializeField]private Quaternion openRotation;
     public float rotationDuration = 1f;
     private InventoryManager inventoryManager;
     public GameObject wrongItemMessage; // Yanlış eşya uyarısı
     public AudioSource audioSource; 
     public AudioClip doorOpenSound;
+    private DoorState doorState;
+
+    
 
     private void Start()
     {
+        doorState = GetComponent<DoorState>();
+
+        if (doorState != null)
+        {
+            isOpen = doorState.isOpen;
+            transform.rotation = isOpen ? openRotation : closedRotation;
+        }
+
         closedRotation = transform.rotation;
         openRotation = Quaternion.Euler(transform.eulerAngles.x, transform.eulerAngles.y + 90f, transform.eulerAngles.z);
         inventoryManager = FindObjectOfType<InventoryManager>();
@@ -38,7 +49,7 @@ public class DoorOpener : MonoBehaviour, IInteractable
         {
             inventoryManager.OpenInventoryForDoor(this); 
         }
-        else if (!isAnimating)
+        else if (!isAnimating && !GetComponent<DoorState>().isOpen)
         {
             StartCoroutine(RotateDoor());
         }
@@ -89,6 +100,10 @@ public class DoorOpener : MonoBehaviour, IInteractable
 
         transform.rotation = targetRotation;
         isOpen = !isOpen;
+
+        if (doorState != null)
+            doorState.isOpen = isOpen;
+
         isAnimating = false;
     }
 }
