@@ -23,6 +23,7 @@ public class WatchAndOpen : MonoBehaviour
         while (!isPuzzleSolved)
         {
             EvaluatePuzzle();
+            Debug.Log($"Checking puzzle state: {isPuzzleSolved}");
             yield return new WaitForSeconds(checkInterval);
         }
     }
